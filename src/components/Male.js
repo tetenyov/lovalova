@@ -1,8 +1,14 @@
 import React from 'react'
+import NavMain from './NavMain'
+import '../scss/page-main.scss'
 
 function Male () {
   return (
-    <h2>Male</h2>
+    <div className='page-main'>
+      <NavMain />
+      <h2>Male</h2>
+    </div>
+    
   )
 }
 

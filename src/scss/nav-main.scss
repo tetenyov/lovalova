@@ -1,0 +1,53 @@
+.nav-main {
+  outline: 2px solid black;
+  width: 70vw;
+  max-width: 1000px;
+  min-width: 750px;
+
+  margin: 0 auto;
+  background-color: yellow;
+
+  &--inner {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+  }
+}
+
+.nav-main__item {
+  outline: 2px solid black;
+  width: 20vw;
+  max-width: 300px;
+
+  &--inner {
+    width: 50px;
+  }
+}
+
+.nav-main__logo {
+  outline: 2px solid black;
+  display: block;
+
+  margin-right: auto;
+  
+  font-size: 3rem;
+
+  &--inner {
+    font-size: 1.4rem;
+  }
+}
+
+.nav-main__list {
+  outline: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.nav-main__female,
+.nav-main__male {
+  outline: 2px solid black;
+  display: block;
+  padding: 0;
+
+}
