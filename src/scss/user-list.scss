@@ -1,0 +1,15 @@
+.user-list {
+  outline: 2px dotted red;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-list__item {
+  outline: 2px dotted black;
+  width: 200px;
+  height: 300px;
+}
+
+.user-list__image {
+  object-fit: contain;
+}

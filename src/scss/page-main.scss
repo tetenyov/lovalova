@@ -5,3 +5,9 @@
 
   margin: 0 auto;
 }
+
+.page-main__wrapper {
+  outline: 2px dotted red;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
