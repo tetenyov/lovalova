@@ -99,7 +99,7 @@ const usersList = [
     id: "1084682904120", 
     gender: "male", 
     age: 20, 
-    hairColor: "red", 
+    hairColor: "blond", 
     height: "medium",
     name: 'Jerrell Schnitzer'
   },
@@ -163,7 +163,7 @@ const usersList = [
     id: "790547889353", 
     gender: "male", 
     age: 19, 
-    hairColor: "brunet",
+    hairColor: "blond",
     height: "medium",
     name: 'Ernesto Policastro'
   },
@@ -179,7 +179,7 @@ const usersList = [
     id: "298075500746", 
     gender: "male", 
     age: 33, 
-    hairColor: "brown", 
+    hairColor: "blond", 
     height: "medium",
     name: 'Adan Marshall'
   },
@@ -234,7 +234,7 @@ const usersList = [
     id: "89352988227", 
     gender: "female", 
     age: 42, 
-    hairColor: "red", 
+    hairColor: "blond", 
     height: "medium",
     name: 'Cheyenne Dalessio'
   }
