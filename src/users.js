@@ -240,6 +240,6 @@ const usersList = [
   }
 ]
 
-usersList.forEach(user => user.photo = `/img/${user.id}.jpeg`)
+usersList.forEach(user => user.photo = `/img/${user.id}.jpg`)
 
 export default usersList

@@ -28,11 +28,13 @@ function UserList (props) {
 
 const mapStateToProps = (state, ownProps) => {
   const { path } = ownProps
+  const { users, age } = state.users
   const pathCompare = path.slice(1)
-  const { users } = state
 
   return {
-    filteredUsers: users.filter(user => pathCompare === user.gender)
+    filteredUsers: users.filter(user => pathCompare === user.gender 
+      && (user.age >= age.from || age.from === null)
+      && (user.age <= age.to || age.to === null))
   }
 };
 

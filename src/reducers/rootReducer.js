@@ -1,8 +1,6 @@
-import usersList from '../users'
-const initialState = {
-  users: usersList
-}
+import { combineReducers } from 'redux'
+import usersReducer from './usersReducer'
 
-export default (state=initialState, action) => {
-   return state
-}
+export default combineReducers({
+  users: usersReducer
+})
