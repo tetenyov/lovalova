@@ -13,7 +13,6 @@ function UserList (props) {
         <NavLink to={`/user/${user.id}`}>
           <img src={user.photo} className='user-list__image'/>
         </NavLink>
-        <UserInfo user={user}/>
       </li>
     )
   })
