@@ -4,6 +4,7 @@ import NavMain from './NavMain'
 import FemalePage from './FemalePage'
 import MalePage from './MalePage'
 import UserPage from './UserPage'
+import Profile from './Profile'
 
 
 import '../scss/site-wrapper.scss'
@@ -16,6 +17,7 @@ function App() {
         <Route path='/female' component={ FemalePage }/>
         <Route path='/male' component={ MalePage }/>
         <Route path='/user/:id' component={ UserPage }/>
+        <Route path='/profile' component={ Profile }/>
       </Switch>
     </div>
   );

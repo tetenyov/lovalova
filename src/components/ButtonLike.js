@@ -1,23 +1,26 @@
 import React from 'react'
 import '../scss/user-page.scss'
 
-function ButtonLike() {
+class ButtonLike extends React.Component {
+  state = {
+    isLike: false
+  }
 
-  // const buttonClickHandler = (evt) => {
-  //   changeButtonColor(evt.target.className)
-  // }
-  // const
-  // const changeButtonColor = (className) => {
-  //   return className.includes('user-page__button-like--active') 
-  //     ? 'user-page__button-like'
-  //     : ' user-page__button-like user-page__button-like--active'
-  // }
+  buttonClickHandler = () => {
+    this.setState(state => ({
+      isLike: !state.isLike
+    }))
+  }
 
-  return (
-    <button className='user-page__button-like' type='button' 
-      
-    />
-  )
-}
+  render() {
+    return (
+      <button 
+        className={ this.state.isLike ? 'user-page__button-like user-page__button-like--active' : 'user-page__button-like' }
+        type='button' 
+        onClick={ this.buttonClickHandler }
+      />
+    )
+  }
+};
 
 export default ButtonLike

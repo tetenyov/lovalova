@@ -12,7 +12,7 @@ function NavMain () {
         LovaLova
       </h1>
       { 
-        !pathname.startsWith('/user') 
+        pathname === '/'
           && (
             <ul className='nav-main__list'>
               <li className={pathname==='/' ? 'nav-main__item' : 'nav-main__item nav-main__item--inner'}>
@@ -28,6 +28,9 @@ function NavMain () {
             </ul>
           )
       }
+      <NavLink to='/profile'>
+        profile
+      </NavLink>
     </nav>
   )
 }
