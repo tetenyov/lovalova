@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { useRouteMatch } from 'react-router-dom'
 import UserInfo from './UserInfo'
 import NavMain from './NavMain'
+import PersonalMessages from './PersonalMessages'
+import ButtonLike from './ButtonLike'
 import '../scss/user-page.scss'
 
 function UserPage (props) {
@@ -14,6 +16,8 @@ function UserPage (props) {
       <h3>{ user.name }</h3>
       <img src={user.photo} className='user-list__image'/>
       <UserInfo user={user}/>
+      <ButtonLike />
+      <PersonalMessages />
     </section>
     
   )

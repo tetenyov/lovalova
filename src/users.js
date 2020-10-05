@@ -218,7 +218,7 @@ const usersList = [
     id: "150063134174", 
     gender: "female", 
     age: 30, 
-    hairColor: "red", 
+    hairColor: "blond", 
     height: "medium",
     name: 'Shaunda Raschke'
   },
