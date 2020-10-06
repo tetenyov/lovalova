@@ -1,5 +1,5 @@
 import usersList from '../users'
-import { CHANGE_AGE } from '../constants/action-types'
+import { CHANGE_FILTER, CREATE_PROFILE } from '../constants/action-types'
 
 const initialUsersState = {
   users: usersList,
@@ -12,24 +12,27 @@ const initialUsersState = {
 };
 
 export default (state=initialUsersState, action) => {
-  const { type, payload: ageData } = action
+  const { type, payload } = action
 
   switch (type) {
-    case CHANGE_AGE:
+    case CHANGE_FILTER:
       return {...state, 
         age: {
-          from: ageData.name === 'age-min' ? ageData.value : state.age.from,
-          to: ageData.name === 'age-max' ? ageData.value : state.age.to
+          from: payload.name === 'age-min' ? payload.value : state.age.from,
+          to: payload.name === 'age-max' ? payload.value : state.age.to
         },
 
-        hairColors: ageData.name.includes('hair') && ageData.isChecked 
-          ? [...state.hairColors, ageData.name] 
-          : state.hairColors.filter(color => color !== ageData.name),
+        hairColors: payload.name.includes('hair') && payload.isChecked 
+          ? [...state.hairColors, payload.name] 
+          : state.hairColors.filter(color => color !== payload.name),
 
-        heights: ageData.name.includes('height') && ageData.isChecked 
-        ? [...state.heights, ageData.name] 
-        : state.heights.filter(height => height !== ageData.name)
+        heights: payload.name.includes('height') && payload.isChecked 
+        ? [...state.heights, payload.name] 
+        : state.heights.filter(height => height !== payload.name)
       }
+    case CREATE_PROFILE:
+          return { ...state,
+            users: [payload , ...state.users] }
   }
   return state
 }

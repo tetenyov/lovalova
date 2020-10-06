@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import '../scss/user-page.scss'
 
 class ButtonLike extends React.Component {
@@ -13,6 +14,7 @@ class ButtonLike extends React.Component {
   }
 
   render() {
+    console.log('----btnLike')
     return (
       <button 
         className={ this.state.isLike ? 'user-page__button-like user-page__button-like--active' : 'user-page__button-like' }

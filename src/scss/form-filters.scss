@@ -2,3 +2,18 @@
   outline: 2px dotted red;
   width: 150px;
 }
+
+.form-filters__group {
+  outline: 2px dotted red;
+  display: flex;
+  flex-direction: column;
+
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.form-filters__wrapper {
+  outline: 2px dotted red;
+  margin: 0;
+  padding: 0;
+}

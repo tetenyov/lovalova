@@ -1,75 +1,78 @@
 import React from 'react'
-import NavMain from './NavMain'
+import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
+import { createProfile } from '../ac/action-creators'
+import Header from './Header'
+import UploadAvatar from './UploadAvatar'
+import editProfile from './editProfile'
 import '../scss/profile.scss'
 
 class Profile extends React.Component {
-  state = {
-    gender: {
-      male: false, 
-      female: false
-    },
-    age: '', 
-    hairColor: {
-      blond: false,
-      brunet: false,
-      brown: false,
-      red: false,
-    }, 
-    height: {
-      tall: false,
-      medium: false,
-      low: false
-    },
-    name: ''
+
+  formChangeHandler = (evt) => {
+    const { getProfileData } = this.props
+    getProfileData(evt)
+  }
+
+  formSubmitHandler = (evt) => {
+    evt.preventDefault()
+
+    const { createProfile, profileData } = this.props
+    createProfile(profileData)
   }
 
   render() {
+    const { getImageSrc, generateId } = this.props
+
     return (
       <section className='profile'>
-        <NavMain />
-        <form className='form-profile'>
+        <Header />
+        <NavLink to='/male'>maleList</NavLink>
+        <UploadAvatar getImageSrc={getImageSrc} generateId={generateId}/>
+        <form className='form-profile' 
+        onChange={ this.formChangeHandler }
+        onSubmit={ this.formSubmitHandler }
+        >
           <fieldset>
             <legend>Gender</legend>
             <label htmlFor='profile-gender-male'>Male</label>
-            <input type='radio' id='profile-gender-male' name='radio-gender' value='male'/>
+            <input type='radio' id='profile-gender-male' name='gender' value='male'/>
             <label htmlFor='profile-gender-female'>Female</label>
-            <input type='radio' id='profile-gender-female' name='radio-gender' value='female'/>
+            <input type='radio' id='profile-gender-female' name='gender' value='female'/>
           </fieldset>
           <fieldset>
             <legend>Age</legend>
-            {/* <label htmlFor='profile-age'>Male</label> */}
-            <input type='number' id='profile-age' name='profile-age'/>
+            <input type='number' id='profile-age' name='age'/>
           </fieldset>
           <fieldset>
             <legend>Hair color</legend>
             <label htmlFor='profile-hair-blond'>Blond</label>
-            <input type='radio' id='profile-hair-blond' name='radio-hair' value='blond'/>
+            <input type='radio' id='profile-hair-blond' name='hairColor' value='blond'/>
             <label htmlFor='profile-hair-brunet'>Brunet</label>
-            <input type='radio' id='profile-hair-brunet' name='radio-hair' value='brunet'/>
+            <input type='radio' id='profile-hair-brunet' name='hairColor' value='brunet'/>
             <label htmlFor='profile-hair-brown'>Brown</label>
-            <input type='radio' id='profile-hair-brown' name='radio-hair' value='brown'/>
+            <input type='radio' id='profile-hair-brown' name='hairColor' value='brown'/>
             <label htmlFor='profile-hair-red'>Red</label>
-            <input type='radio' id='profile-hair-red' name='radio-hair' value='red'/>
+            <input type='radio' id='profile-hair-red' name='hairColor' value='red'/>
           </fieldset>
           <fieldset>
             <legend>Height</legend>
             <label htmlFor='profile-height-tall'>Tall</label>
-            <input type='radio' id='profile-height-tall' name='radio-height' value='tall'/>
+            <input type='radio' id='profile-height-tall' name='height' value='tall'/>
             <label htmlFor='profile-height-medium'>Medium</label>
-            <input type='radio' id='profile-height-medium' name='radio-height' value='medium'/>
+            <input type='radio' id='profile-height-medium' name='height' value='medium'/>
             <label htmlFor='profile-height-low'>Low</label>
-            <input type='radio' id='profile-height-low' name='radio-height' value='low'/>
+            <input type='radio' id='profile-height-low' name='height' value='low'/>
           </fieldset>
           <fieldset>
             <legend>Name</legend>
-            {/* <label htmlFor='profile-name'>Male</label> */}
-            <input type='text' id='profile-name' name='profile-name'/>
+            <input type='text' id='profile-name' name='name'/>
           </fieldset>
+          <button type='submit'></button>
         </form>
       </section>
-      
     )
   }
 }
 
-export default Profile
+export default connect(null, { createProfile })(editProfile(Profile))

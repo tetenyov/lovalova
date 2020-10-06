@@ -2,19 +2,19 @@ import React from 'react'
 import { connect } from 'react-redux' 
 import { NavLink, useRouteMatch } from 'react-router-dom'
 import UserInfo from './UserInfo'
-import NavMain from './NavMain'
+import Header from './Header'
 import PersonalMessages from './PersonalMessages'
 import ButtonLike from './ButtonLike'
 import '../scss/user-page.scss'
 
 function UserPage (props) {
-  const { id: userId } = useRouteMatch().params
-  const user = props.users.find(user => user.id === userId)
-
+  const { id: userId } = useRouteMatch().params;
+  const user = props.users.find(user => user.id === userId);
+  const linkText = user.gender === 'female' ? 'All ladies' : 'All gentlemen';
   return (
     <section className='user-page'>
-      <NavMain />
-      <NavLink to='/female'>all ladies</NavLink>
+      <Header />
+      <NavLink to='/female'>{ linkText }</NavLink>
       <img src={user.photo} className='user-list__image'/>
       <h3>{ user.name }</h3>
       <UserInfo user={user}/>
