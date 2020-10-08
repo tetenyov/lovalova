@@ -1,4 +1,5 @@
 import React from 'react'
+
 import '../scss/form-pm.scss'
 
 class PersonalMessages extends React.Component {
@@ -46,6 +47,7 @@ class PersonalMessages extends React.Component {
         >
           Say something
         </label>
+    
         { 
           this.state.isOpen 
           && <section className='form-pm__dialog'>

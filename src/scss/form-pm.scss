@@ -1,11 +1,10 @@
-// .form-pm__dialog {
-//   display: none;
-// }
+.form-pm__label {
+  display: block;
+}
 
 .form-pm__messages-list {
   display: block;
   width: 300px;
-  // height: 60px;
   background-color: white;
   overflow: hidden;
 }

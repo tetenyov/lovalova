@@ -1,22 +1,39 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { connect } from 'react-redux' 
+import { NavLink, useLocation, useHistory } from 'react-router-dom'
 import NavMain from './NavMain'
 import '../scss/page-header.scss'
 
-function Header() {
+function Header(props) {
   const { pathname } = useLocation()
+  const { users } = props
+  const { gender: currentUserGender } = pathname.includes('user') 
+    && users.find(user => pathname.includes(user.id))
 
   return (
     <header className={pathname==='/' ? 'page-header' : 'page-header page-header--inner'}>
-      <h1 className={pathname==='/' ? 'page-header__logo' : 'page-header__logo page-header__logo--inner'}>
-        LovaLova
-      </h1>
+      {/* <NavLink to='/female'> */}
+      <NavLink to={`/${currentUserGender}`}>
+      {/* <NavLink to={currentUser.gender === 'female' ? '/female' : '/male'}> */}
+        <h1 className={pathname==='/' ? 'page-header__logo' : 'page-header__logo page-header__logo--inner'}>
+          LovaLova
+        </h1>
+      </NavLink>
       <p className={pathname==='/' ? 'page-header__slogan' : 'page-header__slogan page-header__slogan--inner'}>
         Find your love and be happy!
+      </p>
+      <p className={pathname==='/' ? 'page-header__text' : 'page-header__text page-header__text--inner'}>
+        Who you are looking for?
       </p>
       <NavMain />
     </header>
   )
 }
 
-export default Header
+const mapStateToProps = (state) => {
+  return {
+    users: state.users.users
+  }
+}
+
+export default connect(mapStateToProps)(Header)

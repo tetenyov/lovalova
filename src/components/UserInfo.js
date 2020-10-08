@@ -3,7 +3,7 @@ import React from 'react'
 function UserInfo (props) {
   const { user } = props
   return (
-    <table>
+    <table className='user-page__user-info'>
       <thead>
         <tr>
           <th>Age</th>

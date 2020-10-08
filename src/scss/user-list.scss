@@ -1,15 +1,37 @@
 .user-list {
-  outline: 2px dotted red;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .user-list__item {
-  outline: 2px dotted black;
-  width: 200px;
-  height: 300px;
+  position: relative;
+  width: 33%;
+  margin-bottom: 0.5%;
+}
+
+.user-list__heading {
+  position: absolute;
+  bottom: 20px;
+  left: 12px;
+  margin: 0;
+  padding: 2px 8px 2px 8px;
+
+  font-size: 1.4rem;
+  color: white;
+  background-color: #e28086;
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+
+  &--male {
+    background-color: darken(#93d8e4, 10%);
+  }
 }
 
 .user-list__image {
   display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 5px;
 }

@@ -1,5 +1,4 @@
 .page-header {
-  outline: 2px solid black;
   display: flex;
   flex-direction: column;
 
@@ -12,6 +11,8 @@
   &--inner {
     flex-direction: row;
     justify-content: space-between;
+    padding: 12px 18px 12px 18px;
+    background-color: DarkSlateBlue
   }
 }
 
@@ -29,7 +30,8 @@
   }
 }
 
-.page-header__slogan {
+.page-header__slogan,
+.page-header__text {
   display: block;
   margin: 0;
   margin-bottom: 40px;
@@ -42,4 +44,8 @@
   &--inner {
     display: none;
   }
+}
+
+.page-header__text {
+  margin-bottom: 10px;
 }

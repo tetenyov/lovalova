@@ -10,4 +10,18 @@
   outline: 2px dotted red;
   display: grid;
   grid-template-columns: 200px 1fr;
+  justify-items: center;
+}
+
+.page-main__header,
+.page-main__text {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.page-main__text {
+  font-size: 1.3rem;
 }

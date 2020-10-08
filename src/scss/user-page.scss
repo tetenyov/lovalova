@@ -6,7 +6,43 @@
   margin: 0 auto;
 }
 
+.user-page__wrapper {
+  outline: 2px solid black;
+  display: flex;
+
+  &--info {
+    outline: 2px solid red;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &--image {
+    position: relative;
+    flex-wrap: wrap;
+    width: 30vw;
+    max-width: 300px;
+    min-width: 150px;
+  }
+
+  &--interactions {
+    position: relative;
+    flex-grow: 1;
+  }
+}
+
+.user-page__user-info {
+  width: 20vw;
+  max-width: 200px;
+  min-width: 130px;
+  padding-left: 12px;
+
+  font-size: 1.2rem;
+  text-align: left;
+}
+
 .user-page__button-like {
+  position: absolute;
+  right: 0;
   width: 30px;
   height: 30px;
   background-image: url('/img/heart-inactive.svg');
@@ -18,4 +54,20 @@
   &--active {
     background-image: url('/img/heart-active.svg');
   }
+}
+
+.user-page__image {
+  position: relative;
+  width: 30vw;
+  max-width: 300px;
+  min-width: 150px;
+
+  margin: 0 auto;
+}
+
+.user-page__user-name {
+  margin: 0;
+  padding: 4px 12px 4px 12px;
+
+  font-size: 1.6rem;
 }

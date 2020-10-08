@@ -9,7 +9,9 @@ function UserList (props) {
   const userList = filteredUsers.map(user => {
     return (
       <li className='user-list__item' key={user.id}>
-        <h3>{ user.name }</h3>
+        <h3 className={user.gender==='female' ? 'user-list__heading' : 'user-list__heading user-list__heading--male'}>
+          { user.name }
+        </h3>
         <NavLink to={`/user/${user.id}`}>
           <img src={user.photo} className='user-list__image'/>
         </NavLink>

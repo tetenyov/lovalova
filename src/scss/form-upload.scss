@@ -1,7 +1,32 @@
 .form-upload__download {
+  position: relative;
   display: block;
-  width: 150px;
-  height: 100px;
-  background-color: azure;
+  width: 30vw;
+  max-width: 250px;
+  min-width: 150px;
+  min-height: 300px;
+
+  background-image: url('/img/avatar.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   cursor: pointer;
+
+  &::before {
+    content: 'Upload photo';
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    transform: translateX(50%);
+    font-size: 1.4rem;
+    color: white;
+  }
+}
+
+.form-upload__image {
+  position: relative;
+  z-index: 2;
+  width: 30vw;
+  max-width: 250px;
+  min-width: 150px;
 }

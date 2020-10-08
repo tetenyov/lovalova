@@ -18,6 +18,7 @@ function Filters (props) {
 
   return (
     <form className='form-filters' onChange={ inputChangeHandler }>
+      <h3>Preferences</h3>
       <fieldset className='form-filters__group'>
         <legend>Age</legend>
         <p className='form-filters__wrapper'>
