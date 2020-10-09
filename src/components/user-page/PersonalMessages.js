@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../scss/form-pm.scss'
+import '../../scss/form-pm.scss'
 
 class PersonalMessages extends React.Component {
   state = {

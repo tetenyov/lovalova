@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'  
 import { NavLink } from 'react-router-dom'
-import UserInfo from './UserInfo'
+//import UserInfo from './UserInfo'
 import '../scss/user-list.scss'
 
 function UserList (props) {

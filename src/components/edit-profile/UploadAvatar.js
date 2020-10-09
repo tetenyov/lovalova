@@ -1,6 +1,6 @@
 import React from 'react'
-import '../scss/form-upload.scss'
-import '../scss/visually-hidden.scss'
+import '../../scss/form-upload.scss'
+import '../../scss/visually-hidden.scss'
 
 class UploadAvatar extends React.Component {
     state = {

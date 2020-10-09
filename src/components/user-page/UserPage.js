@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux' 
 import { useRouteMatch } from 'react-router-dom'
-import UserInfo from './UserInfo'
-import Header from './Header'
+import UserInfo from '../UserInfo'
+import Header from '../Header'
 import ButtonLike from './ButtonLike'
 import PersonalMessages from './PersonalMessages'
-import '../scss/user-page.scss'
+import '../../scss/user-page.scss'
 
 function UserPage (props) {
   const { id: userId } = useRouteMatch().params;

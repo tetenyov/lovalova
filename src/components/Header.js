@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux' 
-import { NavLink, useLocation, useHistory } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import NavMain from './NavMain'
 import '../scss/page-header.scss'
 
@@ -12,9 +12,7 @@ function Header(props) {
 
   return (
     <header className={pathname==='/' ? 'page-header' : 'page-header page-header--inner'}>
-      {/* <NavLink to='/female'> */}
       <NavLink to={`/${currentUserGender}`}>
-      {/* <NavLink to={currentUser.gender === 'female' ? '/female' : '/male'}> */}
         <h1 className={pathname==='/' ? 'page-header__logo' : 'page-header__logo page-header__logo--inner'}>
           LovaLova
         </h1>

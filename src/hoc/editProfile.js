@@ -38,7 +38,7 @@ const editProfile = (WrappedComponent) => (
       return (
         <WrappedComponent
           profileData={ this.state }
-          {...this.props}
+          { ...this.props }
           getProfileData={ this.getProfileData }
           getImageSrc={ this.getImageSrc }
           generateId={ this.generateId }

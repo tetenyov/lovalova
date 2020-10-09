@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import '../scss/user-page.scss'
+import '../../scss/user-page.scss'
 
 class ButtonLike extends React.Component {
   state = {
