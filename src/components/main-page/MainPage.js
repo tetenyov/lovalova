@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import Header from '../header/Header'
 import PageHeading from './PageHeading'
 import Filters from './Filters'
-import UserList from './UserList'
+import UserListContainer from '../../containers/UserListContainer'
 import './styles/page-main.scss'
 
 function MainPage () {
@@ -19,7 +19,7 @@ function MainPage () {
       </PageHeading>
       <div className='page-main__wrapper'>
         <Filters />
-        <UserList pathname={ pathname }/>
+        <UserListContainer pathname={ pathname }/>
       </div>
     </section>
     
