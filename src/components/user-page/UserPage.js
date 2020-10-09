@@ -14,10 +14,10 @@ function UserPage (props) {
   return (
     <section className='user-page'>
       <Header />
-      <div className='user-page__wrapper'>
+      <div className='user-page__container'>
         <div className='user-page__wrapper user-page__wrapper--image'>
           <img src={user.photo} className='user-page__image'/>
-          <div className='user-page__wrapper user-page__wrapper--interactions'>
+          <div className='user-page__interactions'>
             <PersonalMessages />
             <ButtonLike />
           </div>

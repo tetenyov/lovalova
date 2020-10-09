@@ -1,6 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import './styles/button-like.scss'
+import './styles/buttons.scss'
 
 class ButtonLike extends React.Component {
   state = {
@@ -16,7 +15,7 @@ class ButtonLike extends React.Component {
   render() {
     return (
       <button 
-        className={ this.state.isLike ? 'user-page__button-like user-page__button-like--active' : 'user-page__button-like' }
+        className={ this.state.isLike ? 'button-like button-like--active' : 'button-like' }
         type='button' 
         onClick={ this.buttonClickHandler }
       />

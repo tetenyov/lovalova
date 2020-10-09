@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonSend from '../../components/common/ButtonSend'
 import './styles/form-pm.scss'
 
 class PersonalMessages extends React.Component {
@@ -31,12 +32,12 @@ class PersonalMessages extends React.Component {
   render() {
     const { messages } = this.state
     const messagesList = messages.length 
-      ? messages.map((message, id) => {
+      ? messages.map((message, i) => {
           return (
-            <li key={id}>{ message }</li>
+            <li className='form-pm__message' key={i}>{ message }</li>
           )
         })
-      : <p>no messages yet</p>;
+      : <p className='form-pm__notice'>no messages yet</p>;
 
     return (
       <form onSubmit={ this.formSubmitHandler } className='form-pm'>
@@ -52,12 +53,12 @@ class PersonalMessages extends React.Component {
               <ul className='form-pm__messages-list'>
                 { messagesList }
               </ul>
-              <textarea className='form-pm__message-input' id='pm-textarea'
+              <textarea className='form-pm__message-textarea' id='pm-textarea'
                 placeholder='type here'
                 value={ this.state.message }
                 onChange={ this.inputChangeHandler }
               />
-              <button className='form-pm__send-btn' type='submit'>Send</button>
+              <ButtonSend />
             </section>
         }
       </form>
