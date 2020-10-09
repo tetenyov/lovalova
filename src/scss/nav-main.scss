@@ -29,6 +29,14 @@
   &:first-child {
     margin-right: 20px;
   }
+
+  &--profile {
+    width: auto;
+    margin: 0;
+    padding: 4px 12px 4px 12px;
+    font-size: 1.3rem;
+    color: white;
+  }
 }
 
 .nav-main__female,

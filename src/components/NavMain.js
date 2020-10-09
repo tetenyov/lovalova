@@ -21,7 +21,11 @@ function NavMain () {
       </ul>
     )
     : (
-      <NavLink to='/profile'>profile</NavLink>
+      <NavLink to='/profile' className=''>
+        <ul className='nav-main__list'>
+          <li className='nav-main__item nav-main__item--profile'>profile</li>
+        </ul>
+      </NavLink>
     )
     
   return (

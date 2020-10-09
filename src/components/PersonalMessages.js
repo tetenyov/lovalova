@@ -38,11 +38,11 @@ class PersonalMessages extends React.Component {
             <li key={id}>{ message }</li>
           )
         })
-      : <p>write smth</p>;
+      : <p>no messages yet</p>;
 
     return (
       <form onSubmit={ this.formSubmitHandler } className='form-pm'>
-        <label className='form-pm__label' htmlFor='pm-input'
+        <label className='form-pm__label' htmlFor='pm-textarea'
           onClick={ this.labelClickHandler }
         >
           Say something
@@ -54,11 +54,12 @@ class PersonalMessages extends React.Component {
               <ul className='form-pm__messages-list'>
                 { messagesList }
               </ul>
-              <input className='form-pm__message-input' type='text' id='pm-input'
+              <textarea className='form-pm__message-input' id='pm-textarea'
+                placeholder='type here'
                 value={ this.state.message }
                 onChange={ this.inputChangeHandler }
               />
-              <button className='form-pm__send-message' type='submit'>Send</button>
+              <button className='form-pm__send-btn' type='submit'>Send</button>
             </section>
         }
       </form>

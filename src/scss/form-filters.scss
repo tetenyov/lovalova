@@ -1,10 +1,8 @@
 .form-filters {
-  outline: 2px dotted red;
   width: 150px;
 }
 
 .form-filters__group {
-  outline: 2px dotted red;
   display: flex;
   flex-direction: column;
 
@@ -12,8 +10,74 @@
   margin-bottom: 20px;
 }
 
-.form-filters__wrapper {
-  outline: 2px dotted red;
+.form-filters__heading {
   margin: 0;
   padding: 0;
+}
+
+.form-filters__legend {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.form-filters__wrapper {
+  margin: 0;
+  padding: 0;
+
+  &--age {
+    display: flex;
+    justify-content: space-between;
+
+    width: 80%;
+  }
+}
+
+.form-filters input[type='checkbox'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+
+  &:checked + label::before {
+    background-image: url('/img/checkbox_checked.svg');
+  }
+}
+
+.form-filters input[type='number'] {
+  padding: 4px 8px 4px 8px;
+  font-size: 1.2rem;
+}
+
+.form-filters__label {
+  position: relative;
+  margin-bottom: 6px;
+  padding-left: 34px;
+  font-size: 1.2rem;
+  
+  &--age {
+    margin-right: 6px;
+    padding-left: 4px;
+  }
+
+  &--age::before {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+
+    background-image: url('/img/checkbox_unchecked.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
