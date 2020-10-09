@@ -5,9 +5,11 @@
 .form-filters__group {
   display: flex;
   flex-direction: column;
-
   width: 150px;
+  margin: 0;
   margin-bottom: 20px;
+  padding: 0;
+  border: none;
 }
 
 .form-filters__heading {
@@ -16,9 +18,12 @@
 }
 
 .form-filters__legend {
+  display: block; 
   margin-bottom: 5px;
+  padding: 0;
   font-weight: 700;
   font-size: 1.2rem;
+  white-space: normal;
 }
 
 .form-filters__wrapper {

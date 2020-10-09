@@ -5,7 +5,7 @@ import female from '../pages/female'
 import male from '../pages/male'
 import edit from '../pages/edit'
 import userId from '../pages/user-id'
-import '../scss/site-wrapper.scss'
+import '../styles-global/site-wrapper.scss'
 
 function App() {
 const { pathname } = useLocation()

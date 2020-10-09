@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux' 
 import { NavLink, useLocation } from 'react-router-dom'
 import NavMain from './NavMain'
-import '../scss/page-header.scss'
+import './styles/page-header.scss'
 
 function Header(props) {
   const { pathname } = useLocation()

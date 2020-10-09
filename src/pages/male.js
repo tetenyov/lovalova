@@ -1,8 +1,8 @@
 import React from 'react'
-import MalePage from '../components/MalePage'
+import MainPage from '../components/main-page/MainPage'
 
 function male() {
-  return <MalePage />
+  return <MainPage />
 }
 
 export default male

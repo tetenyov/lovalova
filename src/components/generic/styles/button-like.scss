@@ -1,0 +1,15 @@
+.user-page__button-like {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url('/img/heart-inactive.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+
+  &--active {
+    background-image: url('/img/heart-active.svg');
+  }
+}

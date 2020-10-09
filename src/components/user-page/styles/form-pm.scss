@@ -12,9 +12,11 @@
 .form-pm__messages-list {
   display: block;
   width: 300px;
+  margin: 0;  
   padding: 4px 8px 4px 8px;
+  
   background-color: lightgray;
-  overflow: hidden;
+  list-style: none;
 }
 
 .form-pm__message-input {

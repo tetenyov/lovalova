@@ -1,4 +1,4 @@
-import usersList from '../users'
+import usersList from '../data/users'
 import { CHANGE_FILTER, CREATE_PROFILE } from '../constants/action-types'
 
 const initialUsersState = {

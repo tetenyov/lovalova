@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import '../scss/global.scss'
-import '../scss/nav-main.scss'
+import './styles/nav-main.scss'
 
 function NavMain () {
   const { pathname } = useLocation()

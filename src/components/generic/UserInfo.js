@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/user-info.scss'
 
 function UserInfo (props) {
   const { user } = props

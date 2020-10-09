@@ -1,12 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import { NavLink } from 'react-router-dom'
 import { createProfile } from '../../ac/action-creators'
-import Header from '../Header'
+import Header from '../header/Header'
 import UploadAvatar from './UploadAvatar'
 import editProfile from '../../hoc/editProfile'
-import '../../scss/profile.scss'
-import '../../scss/form-profile.scss'
+import './styles/edit-profile.scss'
+import './styles/form-profile.scss'
 
 function Profile(props) {
   const { getProfileData, createProfile, profileData } = props
