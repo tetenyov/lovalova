@@ -28,10 +28,6 @@ function Header(props) {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    users: state.users.users
-  }
-}
-
-export default connect(mapStateToProps)(Header)
+export default connect(state => ({
+  users: state.users.users
+}))(Header)

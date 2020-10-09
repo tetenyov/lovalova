@@ -1,15 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux' 
 import { useRouteMatch } from 'react-router-dom'
-import UserInfo from '../generic/UserInfo'
+import UserInfo from '../common/UserInfo'
 import Header from '../header/Header'
-import ButtonLike from '../generic/ButtonLike'
+import ButtonLike from '../common/ButtonLike'
 import PersonalMessages from './PersonalMessages'
 import './styles/user-page.scss'
 
 function UserPage (props) {
   const { id: userId } = useRouteMatch().params;
-  const user = props.users.find(user => user.id === userId);
+  const user = props.users.find(user => user.id === userId); 
+
   return (
     <section className='user-page'>
       <Header />
@@ -31,10 +32,6 @@ function UserPage (props) {
   )
 };
 
-const mapStateToProps = (state) => {
-  return {
-    users: state.users.users
-  }
-};
-
-export default connect(mapStateToProps)(UserPage);
+export default connect(state => ({
+  users: state.users.users
+}))(UserPage);

@@ -7,7 +7,7 @@ import editProfile from '../../hoc/editProfile'
 import './styles/edit-profile.scss'
 import './styles/form-profile.scss'
 
-function Profile(props) {
+function EditProfile(props) {
   const { getProfileData, createProfile, profileData } = props
 
   const formChangeHandler = (evt) => getProfileData(evt)
@@ -70,4 +70,4 @@ function Profile(props) {
   )
 }
 
-export default connect(null, { createProfile })(editProfile(Profile))
+export default connect(null, { createProfile })(editProfile(EditProfile))

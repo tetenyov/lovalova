@@ -1,6 +1,4 @@
 import React from 'react'
-// import { connect } from 'react-redux'
-// import { createProfile } from '../ac/action-creators'
 
 const editProfile = (WrappedComponent) => (
   class EditProfile extends React.Component {

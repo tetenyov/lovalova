@@ -3,7 +3,7 @@ import React from 'react'
 function PageHeading(props) {
   return (
     <div>
-      {props.children}
+      { props.children }
     </div>
   )
 }

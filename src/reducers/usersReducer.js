@@ -33,6 +33,7 @@ export default (state=initialUsersState, action) => {
     case CREATE_PROFILE:
           return { ...state,
             users: [payload , ...state.users] }
+    default: 
+      return state
   }
-  return state
 }

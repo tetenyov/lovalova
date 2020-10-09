@@ -3,24 +3,23 @@ import './styles/form-upload.scss'
 import '../../styles-global/visually-hidden.scss'
 
 class UploadAvatar extends React.Component {
-    state = {
-      src: ''
-    }
+  state = {
+    src: ''
+  }
 
-    inputChangeHandler = (evt) => {
-    
-      const file = evt.target.files[0]
-      const reader = new FileReader()
-      reader.readAsDataURL(file)
+  inputChangeHandler = (evt) => {
+    const file = evt.target.files[0]
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
 
-      reader.onload = () => {
-        const { getImageSrc, generateId } = this.props
-        const imageSrc = reader.result
-        this.setState({ src: imageSrc })
-        getImageSrc(imageSrc)
-        generateId()
-      }
+    reader.onload = () => {
+      const { getImageSrc, generateId } = this.props
+      const imageSrc = reader.result
+      this.setState({ src: imageSrc })
+      getImageSrc(imageSrc)
+      generateId()
     }
+  }
 
   render () {
     return (
@@ -34,10 +33,6 @@ class UploadAvatar extends React.Component {
         </form>
       )
   }
-
-
-
-  
 }
 
 export default UploadAvatar

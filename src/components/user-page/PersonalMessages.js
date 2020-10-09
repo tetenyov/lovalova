@@ -29,7 +29,6 @@ class PersonalMessages extends React.Component {
   }
 
   render() {
-    console.log('----messages')
     const { messages } = this.state
     const messagesList = messages.length 
       ? messages.map((message, id) => {
