@@ -41,21 +41,22 @@ class EditProfile extends React.Component {
   render() {
     const { getImageSrc, generateId } = this.props
     const { userCreated, gender } = this.state
+
     return (
       <section className='profile'>
         <Header />
         <div className='profile__wrapper'>
           <div className='profile__avatar-container'>
-          <UploadAvatar getImageSrc={getImageSrc} generateId={generateId}/>
-          { 
-            userCreated 
-              && <p className='profile__notice'>
-                   Your profile is  
-                  <NavLink to={`/${gender}`}>
-                    <span className='profile__link'> on site!</span>
-                  </NavLink>
-                 </p> 
-          }
+            <UploadAvatar getImageSrc={getImageSrc} generateId={generateId}/>
+            { 
+              userCreated 
+                && <p className='profile__notice'>
+                    Your profile is  
+                    <NavLink to={`/${gender}`}>
+                      <span className='profile__link'> on site!</span>
+                    </NavLink>
+                  </p> 
+            }
           </div>
           <form className='form-profile' 
           onChange={this.formChangeHandler}
@@ -96,7 +97,7 @@ class EditProfile extends React.Component {
               <legend className='form-profile__legend'>Name</legend>
               <input type='text' id='profile-name' name='name'/>
             </fieldset>
-            <button className='form-profile__create-btn' type='submit'>Create profile</button>
+            <button className='form-profile__create-btn' disabled={this.state.userCreated} type='submit'>Create profile</button>
           </form>
         </div>
       </section>
