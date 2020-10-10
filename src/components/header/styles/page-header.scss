@@ -1,7 +1,6 @@
 .page-header {
   display: flex;
   flex-direction: column;
-
   width: 70vw;
   max-width: 1000px;
   min-width: 750px;
@@ -12,8 +11,10 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 20px;
-    padding: 12px 18px 12px 18px;
-    background-color: DarkSlateBlue
+    padding: 16px 18px 12px 18px;
+
+    background-color: DarkSlateBlue;
+    border-radius: 4px;
   }
 }
 
@@ -21,13 +22,20 @@
   display: block;
   margin: 0;
   padding: 0;
+  padding: 2px 10px 2px 10px;
   
   font-size: 3rem;
   text-align: center;
   color: white ;
+  border-radius: 4px;
 
   &--inner {
     font-size: 1.4rem;
+  }
+
+  &:hover {
+    color: black;
+    background-color: beige;
   }
 }
 
@@ -49,4 +57,8 @@
 
 .page-header__text {
   margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,6 +1,7 @@
 .user-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-self: flex-start;
   flex-wrap: wrap;
   
   margin: 0;  
@@ -10,7 +11,8 @@
 
 .user-list__item {
   position: relative;
-  width: 33%;
+  width: 31%;
+  margin-right: 0.5%;
   margin-bottom: 0.5%;
 }
 

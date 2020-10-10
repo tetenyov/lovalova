@@ -22,11 +22,11 @@ function Filters (props) {
       <fieldset className='form-filters__group'>
         <legend className='form-filters__legend'>Age</legend>
         <p className='form-filters__wrapper form-filters__wrapper--age'>
-          <label className='form-filters__label form-filters__label--age' htmlFor='age-min'>From</label>
+          <label className='form-filters__label form-filters__label--age' htmlFor='age-min'>From:</label>
           <input type='number' id='age-min' name='age-min' min='24' max='50'/>
         </p>
         <p className='form-filters__wrapper form-filters__wrapper--age'>
-          <label className='form-filters__label form-filters__label--age' htmlFor='age-max'>To</label>
+          <label className='form-filters__label form-filters__label--age' htmlFor='age-max'>To:</label>
           <input type='number' id='age-max' name='age-max' min='18' max='50'/>
         </p>
       </fieldset>

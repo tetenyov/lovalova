@@ -1,13 +1,3 @@
-// .nav-main {
-//   outline: 2px solid black;
-//   // width: 70vw;
-//   // max-width: 1000px;
-//   // min-width: 750px;
-
-//   // margin: 0 auto;
-
-// }
-
 .nav-main__list {
   display: flex;
   justify-content: center;
@@ -21,9 +11,11 @@
 }
 
 .nav-main__item {
-  outline: 2px solid black;
-  width: 22vw;
+  width: 20vw;
   max-width: 300px;
+  min-width: 220px;
+  background-color: snow;
+  border-radius: 10px;
  
   &--inner {
     width: 50px;
@@ -33,20 +25,32 @@
     margin-right: 20px;
   }
 
+  &:hover {
+    transform: scale(1.05);
+    color: black;
+    background-color: beige;
+  }
+
   &--profile {
     width: auto;
+    max-width: auto;
+    min-width: auto;
     margin: 0;
-    padding: 4px 12px 4px 12px;
+    padding: 0 12px 4px 14px;
+
+    background-color: transparent;
     font-size: 1.3rem;
     color: white;
+    border-radius: 4px;
   }
 }
 
 .nav-main__female,
 .nav-main__male {
   position: relative;
+  box-sizing: border-box;
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   padding: 40px;
 }
