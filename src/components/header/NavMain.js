@@ -22,7 +22,7 @@ function NavMain () {
     : (
       <NavLink to='/edit' className=''>
         <ul className='nav-main__list'>
-          <li className='nav-main__item nav-main__item--profile'>create profile</li>
+          <li className='nav-main__item nav-main__item--profile'>Create profile</li>
         </ul>
       </NavLink>
     )

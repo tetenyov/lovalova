@@ -1,5 +1,4 @@
 .profile {
-  outline: 2px dotted red;
   width: 70vw;
   max-width: 1000px;
   min-width: 750px;
@@ -7,7 +6,21 @@
   margin: 0 auto;
 }
 
+.profile__avatar-container {
+  margin-right: 3%;
+}
+
 .profile__wrapper {
   display: flex;
   justify-content: center;
+}
+
+.profile__notice {
+  margin: 0;
+  padding: 6px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: white;
+  background-color: darkgreen;
+  border-radius: 3px;
 }

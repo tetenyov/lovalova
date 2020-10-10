@@ -1,7 +1,3 @@
-.form-upload {
-  margin-right: 2%;
-}
-
 .form-upload__download {
   position: relative;
   display: block;
@@ -9,6 +5,7 @@
   max-width: 250px;
   min-width: 150px;
   min-height: 300px;
+  margin-bottom: 12px;
 
   background-image: url('/img/avatar.png');
   background-repeat: no-repeat;

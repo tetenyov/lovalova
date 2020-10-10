@@ -3,8 +3,12 @@ import './styles/user-info.scss'
 
 function UserInfo (props) {
   const { user } = props
+  const classNameColor = user.gender === 'female' 
+    ? 'user-info__data user-info__data--female' 
+    : 'user-info__data'
+
   return (
-    <table className='user-page__user-info'>
+    <table className='user-info'>
       <thead>
         <tr>
           <th>Age</th>
@@ -14,9 +18,9 @@ function UserInfo (props) {
       </thead>
       <tbody>
         <tr>
-          <td>{ user.age }</td>
-          <td>{ user.hairColor }</td>
-          <td>{ user.height }</td>
+          <td className={classNameColor}>{ user.age }</td>
+          <td className={classNameColor}>{ user.hairColor }</td>
+          <td className={classNameColor}>{ user.height }</td>
         </tr>
       </tbody>
     </table>

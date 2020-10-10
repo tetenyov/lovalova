@@ -8,7 +8,8 @@ const initialUsersState = {
     to: ''
   },
   hairColors: [],
-  heights: []
+  heights: [],
+  userGenderInterest: ''
 };
 
 export default (state=initialUsersState, action) => {
