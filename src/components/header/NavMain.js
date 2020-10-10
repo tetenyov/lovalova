@@ -10,6 +10,7 @@ function NavMain (props) {
 
   const linkClickHandler = (evt) => {
     const gender = evt.currentTarget.href.includes('female') ? 'female' : 'male'
+    localStorage.setItem('gender', gender)
     chooseGender(gender)
   }
 

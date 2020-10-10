@@ -50,9 +50,9 @@ class EditProfile extends React.Component {
           { 
             userCreated 
               && <p className='profile__notice'>
-                   Your profile is 
+                   Your profile is  
                   <NavLink to={`/${gender}`}>
-                    <span>on site!</span>
+                    <span className='profile__link'> on site!</span>
                   </NavLink>
                  </p> 
           }

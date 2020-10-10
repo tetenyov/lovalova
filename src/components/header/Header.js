@@ -6,7 +6,7 @@ import './styles/page-header.scss'
 
 function Header(props) {
   const { pathname } = useLocation()
-  const { gender } = props
+  const gender  = props.gender || localStorage.getItem('gender')
 
   return (
     <header className={pathname==='/' ? 'page-header' : 'page-header page-header--inner'}>
