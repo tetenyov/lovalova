@@ -11,7 +11,9 @@
 
 .user-list__item {
   position: relative;
-  width: 31%;
+  // width: 31%;
+  width: 200px;
+  height: 250px;
   margin-right: 0.5%;
   margin-bottom: 0.5%;
 }
@@ -37,7 +39,20 @@
 .user-list__image {
   display: block;
   width: 100%;
-  height: auto;
-
+  height: 100%;
   border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+  .user-list__item {
+    width: 180px;
+    height: 225px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .user-list__item {
+    width: 160px;
+    height: 200px;
+  }
 }

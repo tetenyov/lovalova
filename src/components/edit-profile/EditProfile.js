@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import { createProfile } from '../../ac/action-creators'
 import Header from '../header/Header'
 import UploadAvatar from './UploadAvatar'
@@ -9,16 +10,23 @@ import './styles/form-profile.scss'
 
 class EditProfile extends React.Component {
   state = {
-    userCreated: false
+    userCreated: false,
+    gender: ''
   }
 
   formChangeHandler = (evt) => {
+    const { generateId } = this.props
+    generateId()
     this.props.getProfileData(evt)
+    this.setState({
+      [evt.target.name]: evt.target.value
+    })
   }
 
   formSubmitHandler = (evt) => {
     evt.preventDefault()
     const { createProfile, profileData } = this.props
+    
     createProfile(profileData)
   }
   
@@ -32,14 +40,22 @@ class EditProfile extends React.Component {
 
   render() {
     const { getImageSrc, generateId } = this.props
-    const { userCreated } = this.state
+    const { userCreated, gender } = this.state
     return (
       <section className='profile'>
         <Header />
         <div className='profile__wrapper'>
           <div className='profile__avatar-container'>
           <UploadAvatar getImageSrc={getImageSrc} generateId={generateId}/>
-          { userCreated && <p className='profile__notice'>Your profile is on site!</p> }
+          { 
+            userCreated 
+              && <p className='profile__notice'>
+                   Your profile is 
+                  <NavLink to={`/${gender}`}>
+                    <span>on site!</span>
+                  </NavLink>
+                 </p> 
+          }
           </div>
           <form className='form-profile' 
           onChange={this.formChangeHandler}

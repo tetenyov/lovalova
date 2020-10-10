@@ -6,13 +6,11 @@ import './styles/page-header.scss'
 
 function Header(props) {
   const { pathname } = useLocation()
-  const { users } = props
-  const { gender: currentUserGender } = pathname.includes('user') 
-    && users.find(user => pathname.includes(user.id))
+  const { gender } = props
 
   return (
     <header className={pathname==='/' ? 'page-header' : 'page-header page-header--inner'}>
-      <NavLink to={`/${currentUserGender}`}>
+      <NavLink to={`/${gender}`}>
         <h1 className={pathname==='/' ? 'page-header__logo' : 'page-header__logo page-header__logo--inner'}>
           LovaLova
         </h1>
@@ -29,5 +27,5 @@ function Header(props) {
 }
 
 export default connect(state => ({
-  users: state.users.users
+  gender: state.users.userGenderInterest
 }))(Header)

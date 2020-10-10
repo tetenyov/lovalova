@@ -1,5 +1,5 @@
 import usersList from '../data/users'
-import { CHANGE_FILTER, CREATE_PROFILE } from '../constants/action-types'
+import { CHANGE_FILTER, CREATE_PROFILE, CHOOSE__GENDER } from '../constants/action-types'
 
 const initialUsersState = {
   users: usersList,
@@ -30,10 +30,18 @@ export default (state=initialUsersState, action) => {
         heights: payload.name.includes('height') && payload.isChecked 
         ? [...state.heights, payload.name] 
         : state.heights.filter(height => height !== payload.name)
-      }
+      }; 
+
     case CREATE_PROFILE:
-          return { ...state,
-            users: [payload , ...state.users] }
+      return { ...state,
+        users: [payload , ...state.users] 
+      };
+
+    case CHOOSE__GENDER:
+      return { ...state,
+        userGenderInterest: payload
+      };
+      
     default: 
       return state
   }

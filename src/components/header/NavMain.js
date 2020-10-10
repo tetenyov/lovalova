@@ -1,19 +1,28 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { NavLink, useLocation } from 'react-router-dom'
+import { chooseGender } from '../../ac/action-creators'
 import './styles/nav-main.scss'
 
-function NavMain () {
+function NavMain (props) {
   const { pathname } = useLocation()
+  const { chooseGender } = props
+
+  const linkClickHandler = (evt) => {
+    const gender = evt.currentTarget.href.includes('female') ? 'female' : 'male'
+    chooseGender(gender)
+  }
+
   const navContent = pathname === '/' 
     ? (
       <ul className='nav-main__list'>
         <li className={pathname==='/' ? 'nav-main__item' : 'nav-main__item nav-main__item--inner'}>
-          <NavLink to='/female'>
-            <img src={'/img/female.svg'} className='nav-main__female' width={`300px`} height={`300px`}/>
+          <NavLink to='/female' onClick={linkClickHandler}>
+            <img src={'/img/female.svg'} className='nav-main__female' value='female' width={`300px`} height={`300px`}/>
           </NavLink>
         </li>
         <li className={pathname==='/' ? 'nav-main__item' : 'nav-main__item nav-main__item--inner'}>
-          <NavLink to='/male'>
+          <NavLink to='/male' value='male' onClick={linkClickHandler}>
             <img src={'/img/male.svg'} className='nav-main__male' width={`300px`} height={`300px`}/>
           </NavLink>
         </li>
@@ -34,4 +43,4 @@ function NavMain () {
   )
 }
 
-export default NavMain
+export default connect(null, { chooseGender })(NavMain)

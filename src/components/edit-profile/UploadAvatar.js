@@ -17,7 +17,7 @@ class UploadAvatar extends React.Component {
       const imageSrc = reader.result
       this.setState({ src: imageSrc })
       getImageSrc(imageSrc)
-      generateId()
+      
     }
   }
 
