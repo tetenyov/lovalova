@@ -17,8 +17,8 @@ class EditProfile extends Component {
   }
 
   formChangeHandler = (evt) => {
-    const { generateId } = this.props
-    generateId()
+    // const { generateId } = this.props
+    // generateId()
     this.props.getProfileData(evt)
     this.setState({
       [evt.target.name]: evt.target.value

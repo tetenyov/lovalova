@@ -24,13 +24,13 @@ const editProfile = (WrappedComponent) => (
       })
     }
 
-    generateId = () => {
-      const id = (Math.round(Math.random() * Date.now())).toString()
-      this.setState({
-        id
-      })
-      return id
-    }
+    // generateId = () => {
+    //   const id = (Math.round(Math.random() * Date.now())).toString()
+    //   this.setState({
+    //     id
+    //   })
+    //   return id
+    // }
 
     render() {
       return (
