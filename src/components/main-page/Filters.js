@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { applyFilter } from '../../ac/action-creators'
+
+import { applyFilter } from '../../action-creators/action-creators'
+
 import './styles/form-filters.scss'
 
 function Filters (props) {

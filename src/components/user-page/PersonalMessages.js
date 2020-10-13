@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
+
 import ButtonSend from '../../components/common/ButtonSend'
+
 import './styles/form-pm.scss'
 
-class PersonalMessages extends React.Component {
+class PersonalMessages extends Component {
   state = {
     message: '',
     messages: [],
@@ -31,12 +33,18 @@ class PersonalMessages extends React.Component {
 
   render() {
     const { messages } = this.state
-    const messagesList = messages.length 
-      ? messages.map((message, i) => {
+    const getMessagesList = () => {
+      return (
+        messages.map((message, i) => {
           return (
             <li className='form-pm__message' key={i}>{ message }</li>
           )
         })
+      )
+    }
+
+    const messagesList = messages.length 
+      ? getMessagesList()
       : <p className='form-pm__notice'>no messages yet</p>;
 
     return (

@@ -1,9 +1,11 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+
 import Header from '../header/Header'
 import PageHeading from './PageHeading'
 import Filters from './Filters'
 import UserListContainer from '../../containers/UserListContainer'
+
 import './styles/page-main.scss'
 
 function MainPage () {

@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 const editProfile = (WrappedComponent) => (
-  class EditProfile extends React.Component {
+  class EditProfile extends Component {
     state = {
       id: '',
       gender: '',

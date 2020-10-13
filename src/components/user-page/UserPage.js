@@ -1,10 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux' 
 import { useRouteMatch } from 'react-router-dom'
+
 import UserInfo from '../common/UserInfo'
 import Header from '../header/Header'
 import ButtonLike from '../common/ButtonLike'
 import PersonalMessages from './PersonalMessages'
+
 import './styles/user-page.scss'
 
 function UserPage (props) {

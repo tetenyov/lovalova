@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
+
 import './styles/buttons.scss'
 
-class ButtonLike extends React.Component {
+class ButtonLike extends Component {
   state = {
     isLike: false
   }

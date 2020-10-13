@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { createProfile } from '../../ac/action-creators'
+
+import { createProfile } from '../../action-creators/action-creators'
 import Header from '../header/Header'
 import UploadAvatar from './UploadAvatar'
-import editProfile from '../../hoc/editProfile'
+import editProfile from '../../utils/editProfile'
+
 import './styles/edit-profile.scss'
 import './styles/form-profile.scss'
 
-class EditProfile extends React.Component {
+class EditProfile extends Component {
   state = {
     userCreated: false,
     gender: ''
@@ -59,8 +61,8 @@ class EditProfile extends React.Component {
             }
           </div>
           <form className='form-profile' 
-          onChange={this.formChangeHandler}
-          onSubmit={this.formSubmitHandler}
+            onChange={this.formChangeHandler}
+            onSubmit={this.formSubmitHandler}
           >
             <fieldset className='form-profile__group'> 
               <legend className='form-profile__legend'>Gender</legend>

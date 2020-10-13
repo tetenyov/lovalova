@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+
 import UserList from '../components/main-page/UserList'
 
 const mapStateToProps = (state, ownProps) => {

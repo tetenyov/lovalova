@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
+
 import './styles/form-upload.scss'
 import '../../styles-global/visually-hidden.scss'
 
-class UploadAvatar extends React.Component {
+class UploadAvatar extends Component {
   state = {
     src: ''
   }
@@ -13,7 +14,7 @@ class UploadAvatar extends React.Component {
     reader.readAsDataURL(file)
 
     reader.onload = () => {
-      const { getImageSrc, generateId } = this.props
+      const { getImageSrc } = this.props
       const imageSrc = reader.result
       this.setState({ src: imageSrc })
       getImageSrc(imageSrc)
