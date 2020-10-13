@@ -10,7 +10,12 @@
   }
 }
 
-.nav-main__item {
+.nav-main__list li:first-child {
+  margin-right: 20px;
+}
+
+.nav-main__link {
+  display: block;
   width: 20vw;
   max-width: 300px;
   min-width: 220px;
@@ -19,10 +24,6 @@
  
   &--inner {
     width: 50px;
-  }
-
-  &:first-child {
-    margin-right: 20px;
   }
 
   &:hover {
@@ -42,6 +43,11 @@
     font-size: 1.3rem;
     color: white;
     border-radius: 4px;
+  }
+
+  &--current {
+    color: black;
+    background-color: beige;
   }
 }
 

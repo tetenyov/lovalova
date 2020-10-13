@@ -19,13 +19,17 @@ function NavMain (props) {
   const getNavEnterPage = () => {
     return (
       <ul className='nav-main__list'>
-        <li className={pathname === '/' ? 'nav-main__item' : 'nav-main__item nav-main__item--inner'}>
-          <NavLink to='/female' onClick={linkClickHandler}>
+        <li>
+          <NavLink to='/female' className={pathname === '/' ? 'nav-main__link' : 'nav-main__link nav-main__item--link'} 
+            onClick={linkClickHandler}
+          >
             <img src={'/img/female.svg'} className='nav-main__female' value='female' width={`300px`} height={`300px`}/>
           </NavLink>
         </li>
-        <li className={pathname === '/' ? 'nav-main__item' : 'nav-main__item nav-main__item--inner'}>
-          <NavLink to='/male' value='male' onClick={linkClickHandler}>
+        <li>
+          <NavLink to='/male' className={pathname === '/' ? 'nav-main__link' : 'nav-main__link nav-main__link--inner'} 
+            onClick={linkClickHandler}
+          >
             <img src={'/img/male.svg'} className='nav-main__male' width={`300px`} height={`300px`}/>
           </NavLink>
         </li>
@@ -35,11 +39,15 @@ function NavMain (props) {
   
   const getNavInnerPage = () => {
     return (
-      <NavLink to='/edit' className=''>
       <ul className='nav-main__list'>
-        <li className='nav-main__item nav-main__item--profile'>Create profile</li>
+        <li>
+          <NavLink to='/edit' className='nav-main__link nav-main__link--profile' 
+            activeClassName='nav-main__link--current'
+          >
+            Create profile
+          </NavLink>
+        </li>
       </ul>
-    </NavLink>
     )
   }
 
