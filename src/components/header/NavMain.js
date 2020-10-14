@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { NavLink, useLocation } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import { chooseGender } from '../../action-creators/action-creators'
 
@@ -58,6 +59,10 @@ function NavMain (props) {
       { navContent }
     </nav>
   )
+}
+
+NavMain.propTypes = {
+  chooseGender: PropTypes.func,
 }
 
 export default connect(null, { chooseGender })(NavMain)

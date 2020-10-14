@@ -24,14 +24,6 @@ const editProfile = (WrappedComponent) => (
       })
     }
 
-    // generateId = () => {
-    //   const id = (Math.round(Math.random() * Date.now())).toString()
-    //   this.setState({
-    //     id
-    //   })
-    //   return id
-    // }
-
     render() {
       return (
         <WrappedComponent
@@ -39,7 +31,6 @@ const editProfile = (WrappedComponent) => (
           { ...this.props }
           getProfileData={ this.getProfileData }
           getImageSrc={ this.getImageSrc }
-          generateId={ this.generateId }
         />
       )
     }

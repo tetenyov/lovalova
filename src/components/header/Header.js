@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux' 
 import { NavLink, useLocation } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import NavMain from './NavMain'
 
@@ -26,6 +27,10 @@ function Header(props) {
       <NavMain />
     </header>
   )
+}
+
+Header.propTypes = {
+  gender: PropTypes.string,
 }
 
 export default connect(state => ({

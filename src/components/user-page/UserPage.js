@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux' 
 import { useRouteMatch } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import UserInfo from '../common/UserInfo'
 import Header from '../header/Header'
@@ -33,6 +34,10 @@ function UserPage (props) {
     
   )
 };
+
+UserPage.propTypes = {
+  users: PropTypes.array
+}
 
 export default connect(state => ({
   users: state.users.users

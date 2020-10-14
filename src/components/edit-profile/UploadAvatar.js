@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import './styles/form-upload.scss'
 import '../../styles-global/visually-hidden.scss'
@@ -34,6 +35,10 @@ class UploadAvatar extends Component {
         </form>
       )
   }
+}
+
+UploadAvatar.propTypes = {
+  getImageSrc: PropTypes.func.isRequired
 }
 
 export default UploadAvatar

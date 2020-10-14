@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import './styles/user-info.scss'
 
 function UserInfo (props) {
@@ -25,6 +27,15 @@ function UserInfo (props) {
       </tbody>
     </table>
   )
+}
+
+UserInfo.propTypes = {
+  user: PropTypes.shape({
+    gender: PropTypes.string,
+    age: PropTypes.number,
+    hairColor: PropTypes.string,
+    height: PropTypes.string
+  })
 }
 
 export default UserInfo
