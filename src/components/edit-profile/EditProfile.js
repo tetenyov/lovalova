@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import { createProfile } from '../../action-creators/action-creators'
 import Header from '../header/Header'
@@ -17,8 +18,6 @@ class EditProfile extends Component {
   }
 
   formChangeHandler = (evt) => {
-    // const { generateId } = this.props
-    // generateId()
     this.props.getProfileData(evt)
     this.setState({
       [evt.target.name]: evt.target.value
@@ -41,7 +40,7 @@ class EditProfile extends Component {
   }
 
   render() {
-    const { getImageSrc, generateId } = this.props
+    const { getImageSrc } = this.props
     const { userCreated, gender } = this.state
 
     return (
@@ -49,7 +48,7 @@ class EditProfile extends Component {
         <Header />
         <div className='profile__wrapper'>
           <div className='profile__avatar-container'>
-            <UploadAvatar getImageSrc={getImageSrc} generateId={generateId}/>
+            <UploadAvatar getImageSrc={getImageSrc}/>
             { 
               userCreated 
                 && <p className='profile__notice'>
@@ -105,6 +104,20 @@ class EditProfile extends Component {
       </section>
     )
   }
+}
+
+EditProfile.propTypes = {
+  users: PropTypes.array,
+  profileData: PropTypes.shape({
+    gender: PropTypes.string,
+    age: PropTypes.string,
+    hairColor: PropTypes.string,
+    height: PropTypes.string,
+    name: PropTypes.string,
+    photo: PropTypes.string,
+  }),
+  getProfileData: PropTypes.func,
+  getImageSrc: PropTypes.func
 }
 
 export default connect(state => ({

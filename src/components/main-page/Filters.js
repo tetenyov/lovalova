@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import { applyFilter } from '../../action-creators/action-creators'
 
@@ -71,6 +72,14 @@ function Filters (props) {
       </fieldset>
     </form>
   )
+}
+
+Filters.propTypes = {
+  from: PropTypes.string,
+  to: PropTypes.string,
+  hairColors: PropTypes.array,
+  heights: PropTypes.array,
+  applyFilter: PropTypes.func
 }
 
 export default connect(state => ({
