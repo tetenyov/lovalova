@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import Spinner from '../common/Spinner'
+
 import './styles/form-upload.scss'
 import '../../styles-global/visually-hidden.scss'
 
 class UploadAvatar extends Component {
   state = {
-    src: ''
+    src: '',
+    isLoading: null
   }
 
   inputChangeHandler = (evt) => {
+    this.setState({ isLoading: true })
     const file = evt.target.files[0]
     const reader = new FileReader()
     reader.readAsDataURL(file)
@@ -17,9 +21,8 @@ class UploadAvatar extends Component {
     reader.onload = () => {
       const { getImageSrc } = this.props
       const imageSrc = reader.result
-      this.setState({ src: imageSrc })
+      this.setState({ src: imageSrc, isLoading: false })
       getImageSrc(imageSrc)
-      
     }
   }
 
@@ -31,6 +34,7 @@ class UploadAvatar extends Component {
           />
           <label className='form-upload__download' htmlFor='file-download'>
             <img className='form-upload__image' src={ this.state.src } />
+          { this.state.isLoading && <Spinner /> }
           </label>
         </form>
       )
