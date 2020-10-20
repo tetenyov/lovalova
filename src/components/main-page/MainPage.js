@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 import Header from '../header/Header'
 import PageHeading from './PageHeading'
-import Filters from './Filters'
+import Filters from '../filters/Filters'
 import UserListContainer from '../../containers/UserListContainer'
 
 import './styles/page-main.scss'

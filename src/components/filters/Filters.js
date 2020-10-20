@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { applyFilter } from '../../action-creators/action-creators'
 
-import './styles/form-filters.scss'
+import './form-filters.scss'
 
 function Filters (props) {
 

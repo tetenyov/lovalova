@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import Spinner from '../common/Spinner'
 
-import './styles/user-list.scss'
+import './user-list.scss'
 
 class UserList extends Component {
   state = {

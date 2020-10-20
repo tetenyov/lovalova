@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import UserList from '../components/main-page/UserList'
+import UserList from '../components/user-list/UserList'
 
 const mapStateToProps = (state, ownProps) => {
   const { pathname } = ownProps
