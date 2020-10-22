@@ -5,7 +5,7 @@
   max-width: 250px;
   min-width: 150px;
   min-height: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
   background-image: url('/img/avatar.png');
   background-repeat: no-repeat;
@@ -34,4 +34,17 @@
   min-width: 150px;
 
   border-radius: 5px;
+}
+
+.form-upload__validation-notice {
+  width: 25vw;
+  max-width: 240px;
+  min-width: 150px;
+  padding: 4px;
+  text-align: center;
+  outline: 3px solid red;
+
+  &--success {
+    outline: 3px solid green;
+  }
 }

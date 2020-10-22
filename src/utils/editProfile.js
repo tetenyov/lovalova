@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 const editProfile = (WrappedComponent) => (
   class EditProfile extends Component {
     state = {
-      id: '',
       gender: '',
       age: '', 
       hairColor: '', 
