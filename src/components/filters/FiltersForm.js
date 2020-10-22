@@ -1,18 +1,17 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
-import validateForm from '../../utils/validateForm'
+import { isChecked } from '../../utils/utils'
 
 class FiltersForm extends Component {
 
   formChangeHandler = (evt) => {
     const { sendData} = this.props
-
     sendData(evt)
   }
 
   render() {
-    const { from, to, hairColors, heights, isChecked, } = this.props
-
+    const {from, to, hairColors, heights } = this.props
+    
     return (
       <form className='form-filters' onChange={this.formChangeHandler}>
         <h3 className='form-filters__heading'>Preferences</h3>
@@ -20,12 +19,11 @@ class FiltersForm extends Component {
           <legend className='form-filters__legend'>Age</legend>
           <p className='form-filters__wrapper form-filters__wrapper--age'>
             <label className='form-filters__label form-filters__label--age' htmlFor='age-min'>From:</label>
-            <input type='number' id='age-min' defaultValue={from} name='age-min'/>
+            <input type='number' id='age-min' defaultValue={ from } name='age-min'/>
           </p>
           <p className='form-filters__wrapper form-filters__wrapper--age'>
             <label className='form-filters__label form-filters__label--age' htmlFor='age-max'>To:</label>
-            <input type='number' id='age-max' defaultValue={to} name='age-max'/>
-            { validateForm(this.props) && <span className='form-filters__error'>{ validateForm(this.props)} </span> }
+            <input type='number' id='age-max' defaultValue={ to } name='age-max'/>
           </p>
         </fieldset>
         <fieldset className='form-filters__group'>

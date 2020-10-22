@@ -4,14 +4,14 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom'
 import rootReducer from './reducers/rootReducer'
-import randomIdMiddleware from './middlewares/randomIdMiddleware'
+import { randomId, validateAge } from './middlewares/middlewares'
 import App from './components/App';
 
 
 
 const store = createStore(
   rootReducer, compose(
-    applyMiddleware(randomIdMiddleware),
+    applyMiddleware(randomId, validateAge),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 )

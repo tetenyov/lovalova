@@ -38,6 +38,7 @@
 }
 
 .form-filters__wrapper {
+  position: relative;
   margin: 0;
   margin-bottom: 4px;
   padding: 0;
@@ -68,6 +69,7 @@
 }
 
 .form-filters input[type='number'] {
+  width: 35px;
   font-size: 0.9rem;
   background-color: transparent;
   border: none;
@@ -106,4 +108,15 @@
     background-position: center;
     background-size: contain;
   }
+}
+
+.form-filters__error {
+  position: absolute;
+  left: -140px;
+  width: 120px;
+  padding: 6px;
+  text-align: center;
+  background-color: khaki;
+  color: black;
+  outline: 1px solid red;
 }
