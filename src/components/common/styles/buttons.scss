@@ -32,4 +32,8 @@
   background-color: gray;
   border: none;
   border-radius: 3px;
+
+  &:hover {
+    background-color: darkslateblue;
+  }
 }

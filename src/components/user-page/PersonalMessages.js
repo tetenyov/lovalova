@@ -33,11 +33,12 @@ class PersonalMessages extends Component {
 
   render() {
     const { messages } = this.state
+
     const getMessagesList = () => {
       return (
         messages.map((message, i) => {
           return (
-            <li className='form-pm__message' key={i}>{ message }</li>
+            <li className='form-pm__message' key={i}>{ message }</li> 
           )
         })
       )
