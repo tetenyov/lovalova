@@ -22,7 +22,7 @@ function Header(props) {
         Find your love and be happy!
       </p>
       <p className={pathname === '/' ? 'page-header__text' : 'page-header__text page-header__text--inner'}>
-        Who you are looking for?
+        Whom are you looking for?
       </p>
       <NavMain />
     </header>
