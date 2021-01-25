@@ -1,5 +1,6 @@
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
 
 import ButtonSend from '../common/ButtonSend'
 import { getMessagesList } from '../../utils/utils'
@@ -19,8 +20,13 @@ function PersonalMessages() {
         setFieldValue('messages',  [...values.messages, values.message])
         setFieldValue('message',  '')
       }}
+      validationSchema={Yup.object({
+        message: Yup.string()
+          .min(3, 'Must be minimum 3 characters')
+      })}
+      validateOnChange={false}
     >
-      {({values, handleChange, setFieldValue}) => (
+      {({values, setFieldValue}) => (
         <Form>
           <label className='form-pm__label' htmlFor='pm-textarea'
             onClick={() => setFieldValue('isOpen', !values.isOpen)}
@@ -33,15 +39,17 @@ function PersonalMessages() {
                 <ul className='form-pm__messages-list'>
                   { getMessagesList(values.messages) }
                 </ul>
-                <Field as='textarea' className='form-pm__message-textarea' id='pm-textarea'
-                  placeholder='type here'
-                  value={values.message}
-                  onChange={(evt) => {
-                    handleChange(evt)
-                    setFieldValue('message', evt.target.value)
-                  }}
-                />
-                <ButtonSend />
+                <p className='form-pm__wrapper'>
+                  <Field as='textarea' className='form-pm__message-textarea' id='pm-textarea'
+                    placeholder='type here'
+                    name='message'
+                    value={values.message}
+                  />
+                  <ButtonSend />
+                  <span className='form-pm__error'>
+                    <ErrorMessage name='message' />
+                  </span>
+                </p> 
               </section>
           }
         </Form>
