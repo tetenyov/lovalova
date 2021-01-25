@@ -13,11 +13,16 @@ function Header(props) {
 
   return (
     <header className={pathname === '/' ? 'page-header' : 'page-header page-header--inner'}>
-      <NavLink to={`/${gender}`}>
-        <h1 className={pathname === '/' ? 'page-header__logo' : 'page-header__logo page-header__logo--inner'}>
-          LovaLova
-        </h1>
-      </NavLink>
+      { pathname === '/'
+          ? <h1 className={pathname === '/' ? 'page-header__logo' : 'page-header__logo page-header__logo--inner'}>
+              LovaLova
+            </h1> 
+          : <NavLink to={`${gender}`}>
+              <h1 className={pathname === '/' ? 'page-header__logo' : 'page-header__logo page-header__logo--inner'}>
+                LovaLova
+              </h1>
+            </NavLink>
+      }
       <p className={pathname === '/' ? 'page-header__slogan' : 'page-header__slogan page-header__slogan--inner'}>
         Find your love and be happy!
       </p>
