@@ -1,5 +1,5 @@
-import usersList from '../data/users'
-import { CHANGE_FILTER, CREATE_PROFILE, CHOOSE_GENDER } from '../constants/action-types'
+import usersList from '../../data/users';
+import { CHANGE_FILTER, CREATE_PROFILE, CHOOSE_GENDER } from '../../constants/action-types';
 
 const initialUsersState = {
   users: usersList,

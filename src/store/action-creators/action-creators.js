@@ -1,4 +1,4 @@
-import { CHANGE_FILTER, CREATE_PROFILE, CHOOSE_GENDER, SHOW_LOADER, REMOVE_LOADER } from '../constants/action-types'
+import { CHANGE_FILTER, CREATE_PROFILE, CHOOSE_GENDER, SHOW_LOADER, REMOVE_LOADER } from '../../constants/action-types';
 
 export function applyFilter(filterData) {
   return {

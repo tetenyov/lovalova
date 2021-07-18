@@ -1,4 +1,4 @@
-import { CREATE_PROFILE, CHANGE_FILTER } from '../constants/action-types'
+import { CREATE_PROFILE, CHANGE_FILTER } from '../../constants/action-types';
 
 export const randomId = (store) => (next) => (action) => {
   if (action.type === CREATE_PROFILE) {

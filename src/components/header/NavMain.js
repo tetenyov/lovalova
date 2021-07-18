@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { NavLink, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import { chooseGender } from '../../action-creators/action-creators'
+import { chooseGender } from '../../store/action-creators/action-creators'
 
 import './styles/nav-main.scss'
 

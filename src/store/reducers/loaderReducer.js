@@ -1,4 +1,4 @@
-import { SHOW_LOADER, REMOVE_LOADER } from '../constants/action-types'
+import { SHOW_LOADER, REMOVE_LOADER } from '../../constants/action-types';
 
 const initialLoaderState = {
   isLoading: null
