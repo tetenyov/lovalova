@@ -7,7 +7,7 @@ import Header from '../header/Header'
 import UploadAvatar from './UploadAvatar'
 import EditProfileForm from './EditProfileForm'
 import editProfile from '../../decorators/editProfile'
-import { createProfile } from '../../store/action-creators/action-creators'
+import { createProfile } from '../../store/action-creators'
 import { validateEditProfile } from '../../utils/utils'
 
 import './styles/edit-profile.scss'
