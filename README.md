@@ -19,6 +19,6 @@ Being inside the project folder, run the following commands:
 
 ### Stack
 
-React, Redux, React Router, Formik
+TS, React, Redux
 
 ![Снимок экрана 2020-12-01 в 15 41 55](https://user-images.githubusercontent.com/2980611/100742573-0ab71080-33ec-11eb-9179-c84b06703403.png)
