@@ -35,7 +35,7 @@ export default function Header() {
       <p className={getClassName(pathname, 'page-header__slogan')}>
         Find your love and be happy!
       </p>
-      <p className={getClassName(pathname, 'page-header__text')}>
+      <p className={getClassName(pathname, 'page-header__text')}> 
         Whom are you looking for?
       </p>
       <NavMain />

@@ -6,3 +6,7 @@ export type TUserInfo = {
     height: number;
   }
 };
+
+export type TNavEnterPage = {
+  pathname: string;
+};
