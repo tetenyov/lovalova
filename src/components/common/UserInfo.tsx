@@ -1,10 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 
-import './styles/user-info.scss'
+import { TUserInfo } from '../types/props';
 
-function UserInfo (props) {
-  const { user } = props
+import './styles/user-info.scss';
+
+export default function UserInfo ({ user }: TUserInfo) {
+
   const classNameColor = user.gender === 'female' 
     ? 'user-info__data user-info__data--female' 
     : 'user-info__data'
@@ -26,16 +27,5 @@ function UserInfo (props) {
         </tr>
       </tbody>
     </table>
-  )
-}
-
-UserInfo.propTypes = {
-  user: PropTypes.shape({
-    gender: PropTypes.string,
-    age: PropTypes.number,
-    hairColor: PropTypes.string,
-    height: PropTypes.string
-  })
-}
-
-export default UserInfo
+  );
+};
