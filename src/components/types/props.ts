@@ -10,3 +10,7 @@ export type TUserInfo = {
 export type TNavEnterPage = {
   pathname: string;
 };
+
+export type TPageHeading = {
+  children: React.ReactNode;
+};
