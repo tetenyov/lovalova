@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
-import { TNavEnterPage } from '../types/props';
+import { TNavEnterPage } from '../../types/props';
 
 import { chooseGender } from '../../store/action-creators';
 

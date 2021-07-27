@@ -1,5 +1,8 @@
 import usersList from '../../data/users';
+
 import { CHANGE_FILTER, CREATE_PROFILE, CHOOSE_GENDER } from '../../constants/action-types';
+
+import { TAction } from '../../types/reducers/users-reducer';
 
 const initialUsersState = {
   users: usersList,
@@ -12,22 +15,24 @@ const initialUsersState = {
   userGenderInterest: ''
 };
 
-export default (state=initialUsersState, action) => {
-  const { type, payload } = action
+export default (state=initialUsersState, action: TAction) => {
+  const { type, payload } = action;
+
   const getHairColors = () => {
     return (
       payload.name.includes('hair') && payload.isChecked 
             ? [...state.hairColors, payload.name] 
             : state.hairColors.filter(color => color !== payload.name)
-    )
-  }
+    );
+  };
+
   const getHeights = () => {
     return (
       payload.name.includes('height') && payload.isChecked 
         ? [...state.heights, payload.name] 
         : state.heights.filter(height => height !== payload.name)
-    )
-  }
+    );
+  };
 
   switch (type) {
     case CHANGE_FILTER:
@@ -44,7 +49,7 @@ export default (state=initialUsersState, action) => {
     case CREATE_PROFILE:
       return { 
         ...state,
-         users: [payload , ...state.users] 
+         users: [...state.users, payload] 
       };
 
     case CHOOSE_GENDER:
@@ -54,6 +59,6 @@ export default (state=initialUsersState, action) => {
       };
       
     default: 
-      return state
+      return state;
   }
-}
+};
