@@ -1,10 +1,8 @@
 import usersList from '../../data/users';
-
 import { CHANGE_FILTER, CREATE_PROFILE, CHOOSE_GENDER } from '../../constants/action-types';
-
 import { TAction } from '../../types/reducers/users-reducer';
 
-const initialUsersState = {
+const initialState = {
   users: usersList,
   age: {
     from: '',
@@ -15,7 +13,7 @@ const initialUsersState = {
   userGenderInterest: ''
 };
 
-export default (state=initialUsersState, action: TAction) => {
+export default (state=initialState, action: TAction) => {
   const { type, payload } = action;
 
   const getHairColors = () => {

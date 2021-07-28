@@ -23,7 +23,7 @@ type TPayload = TFilterPayload & TCreateProfilePayload & {
   userGenderInterest: string; 
 };
 
-export type TAction = TFilterPayload & TCreateProfilePayload & {
+export type TAction = {
   type: string;
   payload: TPayload; 
 };
