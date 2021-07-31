@@ -7,7 +7,7 @@ import { getMessagesList } from '../../utils/utils'
 
 import './styles/form-pm.scss'
 
-function PersonalMessages() {
+export default function PersonalMessages() {
 
   return (
     <Formik
@@ -16,7 +16,7 @@ function PersonalMessages() {
         messages: [],
         isOpen: false
       }}
-      onSubmit={(values, {setFieldValue}) => {
+      onSubmit={(values, { setFieldValue }) => {
         setFieldValue('messages',  [...values.messages, values.message])
         setFieldValue('message',  '')
       }}
@@ -26,7 +26,7 @@ function PersonalMessages() {
       })}
       validateOnChange={false}
     >
-      {({values, setFieldValue}) => (
+      {({ values, setFieldValue }) => (
         <Form>
           <label className='form-pm__label' htmlFor='pm-textarea'
             onClick={() => setFieldValue('isOpen', !values.isOpen)}
@@ -40,7 +40,10 @@ function PersonalMessages() {
                   { getMessagesList(values.messages) }
                 </ul>
                 <p className='form-pm__wrapper'>
-                  <Field as='textarea' className='form-pm__message-textarea' id='pm-textarea'
+                  <Field 
+                    as='textarea' 
+                    className='form-pm__message-textarea' 
+                    id='pm-textarea'
                     placeholder='type here'
                     name='message'
                     value={values.message}
@@ -55,7 +58,5 @@ function PersonalMessages() {
         </Form>
       )}
     </Formik>
-  )
-}
-
-export default PersonalMessages
+  );
+};
