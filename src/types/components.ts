@@ -36,3 +36,12 @@ export type TFiltersForm = {
   heights: string[];
   sendData(evt: React.FormEvent<HTMLFormElement>): void;
 };
+
+export type TFilters = {
+  age: {
+    from: string,
+    to: string,
+  };
+  hairColors: string[];
+  heights: string[];
+};
