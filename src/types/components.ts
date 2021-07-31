@@ -28,3 +28,11 @@ export type TUserPageId = {
 export type TUserPageUsers = {
   users: TUser[];
 };
+
+export type TFiltersForm = {
+  from: string;
+  to: string;
+  hairColors: string[];
+  heights: string[];
+  sendData(evt: React.FormEvent<HTMLFormElement>): void;
+};
