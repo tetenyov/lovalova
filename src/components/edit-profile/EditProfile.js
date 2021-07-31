@@ -1,17 +1,16 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
-import Header from '../header/Header'
-import UploadAvatar from './UploadAvatar'
-import EditProfileForm from './EditProfileForm'
-import editProfile from '../../decorators/editProfile'
-import { createProfile } from '../../store/action-creators'
-import { validateEditProfile } from '../../utils/utils'
+import Header from '../header/Header';
+import UploadAvatar from './UploadAvatar';
+import EditProfileForm from './EditProfileForm';
+import editProfile from '../../decorators/editProfile';
+import { createProfile } from '../../store/action-creators';
+import { validateEditProfile } from '../../utils/utils';
 
-import './styles/edit-profile.scss'
-import './styles/form-profile.scss'
+import './styles/edit-profile.scss';
+import './styles/form-profile.scss';
 
 class EditProfile extends Component {
   state = {
@@ -34,9 +33,9 @@ class EditProfile extends Component {
   }
 
   render() {
-    const isValid = validateEditProfile(this.props.profileData)
-    const { getImageSrc } = this.props
-    const { userCreated, gender } = this.state
+    const isValid = validateEditProfile(this.props.profileData);
+    const { getImageSrc } = this.props;
+    const { userCreated, gender } = this.state;
 
     const getCreationNotice = (isCreated) => {
       return isCreated && (
@@ -47,7 +46,7 @@ class EditProfile extends Component {
           </NavLink>
         </p> 
       )
-    }
+    };
 
     const getValidationNotice = (isValid) => {
       return (
@@ -62,7 +61,7 @@ class EditProfile extends Component {
           }
         </p>
       )
-    }
+    };
 
     return (
       <section className='profile'>
@@ -81,24 +80,10 @@ class EditProfile extends Component {
           />
         </div>
       </section>
-    )
+    );
   }
-}
-
-EditProfile.propTypes = {
-  users: PropTypes.array,
-  profileData: PropTypes.shape({
-    gender: PropTypes.string,
-    age: PropTypes.string,
-    hairColor: PropTypes.string,
-    height: PropTypes.string,
-    name: PropTypes.string,
-    photo: PropTypes.string,
-  }),
-  getProfileData: PropTypes.func,
-  getImageSrc: PropTypes.func
-}
+};
 
 export default connect(state => ({
   users: state.users.users
-}), { createProfile })(editProfile(EditProfile))
+}), { createProfile })(editProfile(EditProfile));

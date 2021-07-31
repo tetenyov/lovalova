@@ -1,11 +1,14 @@
-const usersList = [
+import { TUser } from "../types/data";
+
+const usersList: TUser[] = [
   {
     id: "785233571479", 
     gender: "male", 
     age: 29, 
     hairColor: "red", 
     height: "medium",
-    name: 'Ellis Minarik'
+    name: 'Ellis Minarik',
+    photo: '',
   },
   {
     id: "1304922355654", 
@@ -13,7 +16,8 @@ const usersList = [
     age: 34, 
     hairColor: "brown", 
     height: "medium",
-    name: 'Jasmin Greaney'
+    name: 'Jasmin Greaney',
+    photo: '',
   },
   {
     id: "992965310328", 
@@ -21,7 +25,8 @@ const usersList = [
     age: 35, 
     hairColor: "brown", 
     height: "low",
-    name: 'Matthew Hedin'
+    name: 'Matthew Hedin',
+    photo: '',
   },
   {
     id: "200079836465", 
@@ -29,7 +34,8 @@ const usersList = [
     age: 33, 
     hairColor: "brown", 
     height: "medium",
-    name: 'Ivette Winston'
+    name: 'Ivette Winston',
+    photo: '',
   },
   {
     id: "1380256758320", 
@@ -37,7 +43,8 @@ const usersList = [
     age: 39, 
     hairColor: "brunet", 
     height: "medium",
-    name: 'Oswaldo Mayen'
+    name: 'Oswaldo Mayen',
+    photo: '',
   },
   {
     id: "1205198801239", 
@@ -45,7 +52,8 @@ const usersList = [
     age: 25, 
     hairColor: "brown", 
     height: "medium",
-    name: 'Skye Moorman'
+    name: 'Skye Moorman',
+    photo: '',
   },
   {
     id: "607912383354", 
@@ -53,7 +61,8 @@ const usersList = [
     age: 36, 
     hairColor: "red", 
     height: "low",
-    name: 'Herb Garlow'
+    name: 'Herb Garlow',
+    photo: '',
   },
   {
     id: "1061988876703", 
@@ -61,7 +70,8 @@ const usersList = [
     age: 49, 
     hairColor: "brunet", 
     height: "medium",
-    name: 'Terresa Chevere'
+    name: 'Terresa Chevere',
+    photo: '',
   },
   {
     id: "1252924034673", 
@@ -69,7 +79,8 @@ const usersList = [
     age: 45, 
     hairColor: "brunet", 
     height: "low",
-    name: 'Nick Fairman'
+    name: 'Nick Fairman',
+    photo: '',
   },
   {
     id: "157638706737", 
@@ -77,7 +88,8 @@ const usersList = [
     age: 48, 
     hairColor: "brown", 
     height: "low",
-    name: 'Melodie Proffit'
+    name: 'Melodie Proffit',
+    photo: '',
   },
   {
     id: "1291345896809", 
@@ -85,7 +97,8 @@ const usersList = [
     age: 33, 
     hairColor: "brown", 
     height: "low",
-    name: 'Ellis Minarik'
+    name: 'Ellis Minarik',
+    photo: '',
   },
   {
     id: "1599813062941", 
@@ -93,7 +106,8 @@ const usersList = [
     age: 36, 
     hairColor: "brown", 
     height: "low",
-    name: 'Marisha Meissner'
+    name: 'Marisha Meissner',
+    photo: '',
   },
   {
     id: "1084682904120", 
@@ -101,7 +115,8 @@ const usersList = [
     age: 20, 
     hairColor: "blond", 
     height: "medium",
-    name: 'Jerrell Schnitzer'
+    name: 'Jerrell Schnitzer',
+    photo: '',
   },
   {
     id: "1170804389663", 
@@ -109,15 +124,17 @@ const usersList = [
     age: 23, 
     hairColor: "red", 
     height: "low",
-    name: 'Saturnina Ivey'
+    name: 'Saturnina Ivey',
+    photo: '',
   }, 
   {
     id: "180046993467", 
     gender: "male", 
-    ge: 36, 
+    age: 36, 
     hairColor: "red", 
     height: "low",
-    name: 'Brice Bourassa'
+    name: 'Brice Bourassa',
+    photo: '',
   },
   {
     id: "179853706219", 
@@ -125,7 +142,8 @@ const usersList = [
     age: 19, 
     hairColor: "brown", 
     height: "low",
-    name: 'Alyson Sheikh'
+    name: 'Alyson Sheikh',
+    photo: '',
   },
   {
     id: "290471005385", 
@@ -133,7 +151,8 @@ const usersList = [
     age: 28, 
     hairColor: "red", 
     height: "medium",
-    name: 'Osvaldo Fazekas'
+    name: 'Osvaldo Fazekas',
+    photo: '',
   },
   {
     id: "1264886522731", 
@@ -141,7 +160,8 @@ const usersList = [
     age: 29, 
     hairColor: "brunet", 
     height: "medium",
-    name: 'Nora Rascoe'
+    name: 'Nora Rascoe',
+    photo: '',
   },
   {
     id: "913113911190", 
@@ -149,7 +169,8 @@ const usersList = [
     age: 34, 
     hairColor: "red", 
     height: "low",
-    name: 'Joan Markley'
+    name: 'Joan Markley',
+    photo: '',
   },
   {
     id: "592485606649", 
@@ -157,7 +178,8 @@ const usersList = [
     age: 49, 
     hairColor: "brown", 
     height: "medium",
-    name: 'Gaynell Kleiman'
+    name: 'Gaynell Kleiman',
+    photo: '',
   },
   {
     id: "790547889353", 
@@ -165,7 +187,8 @@ const usersList = [
     age: 19, 
     hairColor: "blond",
     height: "medium",
-    name: 'Ernesto Policastro'
+    name: 'Ernesto Policastro',
+    photo: '',
   },
   {
     id: "1539271417015", 
@@ -173,7 +196,8 @@ const usersList = [
     age: 36, 
     hairColor: "brunet", 
     height: "medium",
-    name: 'Joette Bundren'
+    name: 'Joette Bundren',
+    photo: '',
   },
   {
     id: "298075500746", 
@@ -181,7 +205,8 @@ const usersList = [
     age: 33, 
     hairColor: "blond", 
     height: "medium",
-    name: 'Adan Marshall'
+    name: 'Adan Marshall',
+    photo: '',
   },
   {
     id: "1276231406420", 
@@ -189,7 +214,8 @@ const usersList = [
     age: 30, 
     hairColor: "brunet", 
     height: "medium",
-    name: 'Keesha Vrba'
+    name: 'Keesha Vrba',
+    photo: '',
   },
   {
     id: "289407273466", 
@@ -197,14 +223,16 @@ const usersList = [
     age: 42, 
     hairColor: "brown", 
     height: "medium",
-    name: 'John Digweed'
+    name: 'John Digweed',
+    photo: '',
   },
   {
     id: "485645606305", 
     gender: "female", 
     age: 44, hairColor: "brown", 
     height: "medium",
-    name: 'Zulma Adamson'
+    name: 'Zulma Adamson',
+    photo: '',
   },
   {
     id: "127986116501", 
@@ -212,7 +240,8 @@ const usersList = [
     age: 22, 
     hairColor: "red", 
     height: "low",
-    name: 'Demetrius Mcmillin'
+    name: 'Demetrius Mcmillin',
+    photo: '',
   },
   {
     id: "150063134174", 
@@ -220,7 +249,8 @@ const usersList = [
     age: 30, 
     hairColor: "blond", 
     height: "medium",
-    name: 'Shaunda Raschke'
+    name: 'Shaunda Raschke',
+    photo: '',
   },
   {
     id: "100155872419", 
@@ -228,7 +258,8 @@ const usersList = [
     age: 32, 
     hairColor: "red", 
     height: "low",
-    name: 'Cortez Renzi'
+    name: 'Cortez Renzi',
+    photo: '',
   },
   {
     id: "89352988227", 
@@ -236,7 +267,8 @@ const usersList = [
     age: 42, 
     hairColor: "blond", 
     height: "medium",
-    name: 'Cheyenne Dalessio'
+    name: 'Cheyenne Dalessio',
+    photo: '',
   }
 ]
 

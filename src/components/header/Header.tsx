@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink, useLocation } from 'react-router-dom';
 
-import { RootState } from '../types/root-state';
+import { RootState } from '../../types/root-state';
 
 import NavMain from './NavMain'
 

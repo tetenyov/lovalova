@@ -1,3 +1,5 @@
+import { TUser } from '../types/data';
+
 export type TUserInfo = {
   user: {
     age: number;
@@ -13,4 +15,8 @@ export type TNavEnterPage = {
 
 export type TPageHeading = {
   children: React.ReactNode;
+};
+
+export type TUserList = {
+  filteredUsers: TUser[];
 };

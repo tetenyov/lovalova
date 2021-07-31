@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import FiltersForm from './FiltersForm'
-import { applyFilter } from '../../store/action-creators'
+import FiltersForm from './FiltersForm';
+import { applyFilter } from '../../store/action-creators';
 
-import './form-filters.scss'
+import './form-filters.scss';
 
 class Filters extends Component {
 
@@ -26,21 +25,13 @@ class Filters extends Component {
         {...this.props}
         sendData={this.sendData}
       />
-    )
+    );
   }
-}
-
-Filters.propTypes = {
-  from: PropTypes.string,
-  to: PropTypes.string,
-  hairColors: PropTypes.array,
-  heights: PropTypes.array,
-  applyFilter: PropTypes.func
-}
+};
 
 export default connect(state => ({
   from: state.users.age.from,
   to: state.users.age.to,
   hairColors: state.users.hairColors,
   heights: state.users.heights,
-}), { applyFilter })(Filters)
+}), { applyFilter })(Filters);
