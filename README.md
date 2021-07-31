@@ -14,7 +14,7 @@
 Being inside the project folder, run the following commands:
 
 * git clone git@github.com:tetenyov/lovalova.git
-* npm i
+* npm install
 * npm start
 
 ### Stack
