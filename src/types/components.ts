@@ -5,7 +5,7 @@ export type TUserInfo = {
     age: number;
     gender: string;
     hairColor: string;
-    height: number;
+    height: string;
   }
 };
 
@@ -19,4 +19,12 @@ export type TPageHeading = {
 
 export type TUserList = {
   filteredUsers: TUser[];
+};
+
+export type TUserPageId = {
+  id: string;
+};
+
+export type TUserPageUsers = {
+  users: TUser[];
 };
