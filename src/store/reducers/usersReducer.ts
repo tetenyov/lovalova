@@ -1,8 +1,8 @@
 import usersList from '../../data/users';
 import { CHANGE_FILTER, CREATE_PROFILE, CHOOSE_GENDER } from '../../constants/action-types';
-import { TAction } from '../../types/reducers/users-reducer';
+import { TAction,  TUsersReducerInitialState } from '../../types/reducers/users-reducer';
 
-const initialState = {
+const initialState:  TUsersReducerInitialState = {
   users: usersList,
   age: {
     from: '',

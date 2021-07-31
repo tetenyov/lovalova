@@ -1,6 +1,6 @@
-import { TUsers } from "../types/data";
+import { TUser } from "../types/data";
 
-const usersList: TUsers[] = [
+const usersList: TUser[] = [
   {
     id: "785233571479", 
     gender: "male", 

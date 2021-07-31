@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TUserInfo } from '../../types/props';
+import { TUserInfo } from '../../types/components';
 
 import './styles/user-info.scss';
 

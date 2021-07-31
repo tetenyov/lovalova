@@ -1,3 +1,5 @@
+import { TUser } from "../../types/data";
+
 type TFilterPayload = {
   age: {
     from: string,
@@ -26,4 +28,15 @@ type TPayload = TFilterPayload & TCreateProfilePayload & {
 export type TAction = {
   type: string;
   payload: TPayload; 
+};
+
+export type TUsersReducerInitialState = {
+  users: TUser[];
+  age: {
+    from: string,
+    to: string,
+  };
+  hairColors: string[];
+  heights: string[];
+  userGenderInterest: string;
 };

@@ -1,4 +1,4 @@
-export type TUsers = {
+export type TUser = {
   id: string, 
   gender: string, 
   age: number, 
