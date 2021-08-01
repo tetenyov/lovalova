@@ -1,5 +1,0 @@
-export const CHANGE_FILTER = 'CHANGE_FILTER'
-export const CREATE_PROFILE = 'CREATE_PROFILE'
-export const CHOOSE_GENDER = 'CHOOSE_GENDER'
-export const SHOW_LOADER = 'SHOW_LOADER'
-export const REMOVE_LOADER = 'REMOVE_LOADER'
