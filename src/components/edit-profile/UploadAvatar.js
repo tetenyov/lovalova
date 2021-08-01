@@ -42,7 +42,7 @@ export default function UploadAvatar({ getImageSrc }) {
         <img 
           className='form-upload__image' 
           src={ imageSrc }
-          alt='Container for uploaded file' />
+          alt=''/>
       { isLoading && <Spinner /> }
       </label>
     </form>
