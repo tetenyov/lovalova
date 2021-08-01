@@ -10,8 +10,6 @@ import './user-list.scss';
 export default function UserList({ filteredUsers }: TUserList) {
   const [ isLoading, setIsLoading ] = useState(true);
 
-  console.log(filteredUsers)
-
   const handleImageLoad = () => setIsLoading(false);
 
   const userList = filteredUsers.map(user => {
