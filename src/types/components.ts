@@ -45,3 +45,7 @@ export type TFilters = {
   hairColors: string[];
   heights: string[];
 };
+
+export type TUploadAvatar = {
+  getImageSrc(src: string | ArrayBuffer | null): void;
+};

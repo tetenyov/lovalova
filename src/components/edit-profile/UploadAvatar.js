@@ -1,48 +1,50 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+
+// import { TUploadAvatar } from '../../types/components';
 
 import Spinner from '../common/Spinner'
 
 import './styles/form-upload.scss'
 import '../../styles-global/visually-hidden.scss'
 
-class UploadAvatar extends Component {
-  state = {
-    src: '',
-    isLoading: null
-  }
+export default function UploadAvatar({ getImageSrc }) {
+  const [ imageSrc, setImageSrc ] = useState('');
+  const [ isLoading, setIsLoading ] = useState(false);
 
-  inputChangeHandler = (evt) => {
-    this.setState({ isLoading: true })
+  const handleInputChange = (evt) => {
+    setIsLoading(true);
+
     const file = evt.target.files[0]
     const reader = new FileReader()
     reader.readAsDataURL(file)
 
     reader.onload = () => {
-      const { getImageSrc } = this.props
-      const imageSrc = reader.result
-      this.setState({ src: imageSrc, isLoading: false })
-      getImageSrc(imageSrc)
-    }
-  }
+      const imageSrc = reader.result;
 
-  render () {
-    return (
-        <form className='form-upload' id='form' encType='multipart/form-data' autoComplete='off'>
-          <input className='visually-hidden' type='file' id='file-download' name='file-download' multiple accept='image/*' 
-            onChange={ this.inputChangeHandler }
-          />
-          <label className='form-upload__download' htmlFor='file-download'>
-            <img className='form-upload__image' src={ this.state.src } />
-          { this.state.isLoading && <Spinner /> }
-          </label>
-        </form>
-      )
-  }
-}
+      setIsLoading(false);
+      setImageSrc(imageSrc);
 
-UploadAvatar.propTypes = {
-  getImageSrc: PropTypes.func.isRequired
-}
+      getImageSrc(imageSrc);
+    };
+  };
 
-export default UploadAvatar
+
+  return (
+    <form className='form-upload' id='form' encType='multipart/form-data' autoComplete='off'>
+      <input 
+        className='visually-hidden' 
+        type='file' 
+        id='file-download' 
+        name='file-download'
+        multiple accept='image/*' 
+        onChange={ handleInputChange } />
+      <label className='form-upload__download' htmlFor='file-download'>
+        <img 
+          className='form-upload__image' 
+          src={ imageSrc }
+          alt=''/>
+      { isLoading && <Spinner /> }
+      </label>
+    </form>
+  );
+};
