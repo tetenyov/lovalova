@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, ComponentType } from 'react';
 
-export default (WrappedComponent: typeof Component) => (
+import { TEditProfile } from '../types/components';
+
+export default (WrappedComponent: ComponentType<TEditProfile>) => (
   class EditProfile extends Component {
     state = {
       gender: '',

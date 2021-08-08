@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+
+import { createProfile } from '../../store/action-creators';
 
 function EditProfileForm(props) {
-  const { userCreated, isValid, getProfileGender, getProfileData } = props
+  const { userCreated, isValid, getProfileGender, getProfileData, profileData } = props;
+  const dispatch = useDispatch();
 
   const formChangeHandler = (evt) => {
     getProfileGender(evt)
@@ -9,9 +13,8 @@ function EditProfileForm(props) {
   }
 
   const formSubmitHandler = (evt) => {
-    evt.preventDefault()
-    const { createProfile, profileData } = props
-    createProfile(profileData)
+    evt.preventDefault();
+    dispatch(createProfile(profileData));
   }
 
   return (
