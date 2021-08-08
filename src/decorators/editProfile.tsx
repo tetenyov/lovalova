@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, ComponentType } from 'react';
 
-const editProfile = (WrappedComponent) => (
+import { TEditProfile } from '../types/components';
+
+export default (WrappedComponent: ComponentType<TEditProfile>) => (
   class EditProfile extends Component {
     state = {
       gender: '',
@@ -11,13 +13,13 @@ const editProfile = (WrappedComponent) => (
       photo: ''
     }
 
-    getProfileData = (evt) => {
+    getProfileData = (evt: React.ChangeEvent<HTMLFormElement>) => {
       this.setState({
         [evt.target.name]: evt.target.value
       })
     }
 
-    getImageSrc = (imageSrc) => {
+    getImageSrc = (imageSrc: string) => {
       this.setState({
         photo: imageSrc
       })
@@ -31,9 +33,7 @@ const editProfile = (WrappedComponent) => (
           getProfileData={ this.getProfileData }
           getImageSrc={ this.getImageSrc }
         />
-      )
+      );
     }
   }
 )
-
-export default editProfile

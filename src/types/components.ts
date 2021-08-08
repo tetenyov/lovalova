@@ -1,4 +1,5 @@
 import { TUser } from '../types/data';
+import { TProfileData } from './action-creators';
 
 export type TUserInfo = {
   user: {
@@ -48,4 +49,18 @@ export type TFilters = {
 
 export type TUploadAvatar = {
   getImageSrc(src: string | ArrayBuffer | null): void;
+};
+
+export type TEditProfile = {
+  profileData: TProfileData;
+  getProfileData(evt: React.ChangeEvent<HTMLFormElement>): void;
+  getImageSrc(imageSrc: string): void;
+};
+
+export type TEditProfileForm = {
+  isUserCreated: boolean;
+  isValid: boolean;
+  profileData: TProfileData;
+  getProfileGender(evt: React.ChangeEvent<HTMLFormElement>): void;
+  getProfileData(evt: React.ChangeEvent<HTMLFormElement>): void;
 };
