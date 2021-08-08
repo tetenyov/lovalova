@@ -8,7 +8,7 @@ export function validateEditProfile(inputData: TProfileData) {
     .every(input => input.length !== 0);
 };
 
-export function isChecked(checked: string, name: string) {
+export function isChecked(checked: string[], name: string) {
   return checked.includes(name);
 };
 
