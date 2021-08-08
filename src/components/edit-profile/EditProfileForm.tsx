@@ -3,19 +3,21 @@ import { useDispatch } from 'react-redux';
 
 import { createProfile } from '../../store/action-creators';
 
-function EditProfileForm(props) {
-  const { userCreated, isValid, getProfileGender, getProfileData, profileData } = props;
+import { TEditProfileForm } from '../../types/components';
+
+export default function EditProfileForm(props: TEditProfileForm) {
+  const { isUserCreated, isValid, profileData, getProfileGender, getProfileData } = props;
   const dispatch = useDispatch();
 
-  const formChangeHandler = (evt) => {
+  const formChangeHandler = (evt: React.ChangeEvent<HTMLFormElement>) => {
     getProfileGender(evt)
     getProfileData(evt)
-  }
+  };
 
-  const formSubmitHandler = (evt) => {
+  const formSubmitHandler = (evt: React.ChangeEvent<HTMLFormElement>) => {
     evt.preventDefault();
     dispatch(createProfile(profileData));
-  }
+  };
 
   return (
     <form className='form-profile' 
@@ -60,15 +62,13 @@ function EditProfileForm(props) {
       <button 
         type='submit'
         className={
-          userCreated || isValid ? 'form-profile__create-btn' 
+          isUserCreated || isValid ? 'form-profile__create-btn' 
             : 'form-profile__create-btn form-profile__create-btn--disabled'
         }
-        disabled={userCreated || !isValid}
+        disabled={isUserCreated || !isValid}
       >
         Create profile
       </button>
     </form>
-  )
-}
-
-export default EditProfileForm
+  );
+};

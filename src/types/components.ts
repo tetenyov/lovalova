@@ -56,3 +56,11 @@ export type TEditProfile = {
   getProfileData(evt: React.ChangeEvent<HTMLFormElement>): void;
   getImageSrc(imageSrc: string): void;
 };
+
+export type TEditProfileForm = {
+  isUserCreated: boolean;
+  isValid: boolean;
+  profileData: TProfileData;
+  getProfileGender(evt: React.ChangeEvent<HTMLFormElement>): void;
+  getProfileData(evt: React.ChangeEvent<HTMLFormElement>): void;
+};
